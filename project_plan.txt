@@ -128,6 +128,19 @@ DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
 ---self.delete(id)???
 
 -TRANSACTION OBJECT (MVP)
+Properties
+DONE---id
+DONE---amount
+TODO---date
+DONE---merchant_id
+DONE---tag_id
+Methods
+DONE---initialize
+DONE---reader(id,amount,merchant_id,tag_id) - EXPOSE ALL FOR NOW
+DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
+---get tags/merchants
+---self.delete(id)???
+
 
 SQL/TABLES
 
