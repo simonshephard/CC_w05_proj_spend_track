@@ -11,9 +11,9 @@ class Tag
 
   def save
     sql = "INSERT INTO tags
-    name
+    (name)
     VALUES
-    $1
+    ($1)
     RETURNING *"
     values = [@name]
     data = SqlRunner.run(sql, values)

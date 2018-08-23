@@ -162,6 +162,7 @@ DONE---tag_id
 
 VIEWS/DISPLAYS
 -All transactions - amount, merchant, tag, overall total (MVP)
+DONE-simple layout
 
 
 4.DEVELOP
