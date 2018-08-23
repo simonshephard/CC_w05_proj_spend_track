@@ -114,8 +114,19 @@ DONE---initialize
 DONE---reader(name,id)
 DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
 ---get transactions/tags
+---self.delete(id)???
 
 -TAG OBJECT (MVP)
+Properties
+DONE---id
+DONE---name
+Methods
+DONE---initialize
+DONE---reader(name,id)
+DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
+---get transactions/merchants
+---self.delete(id)???
+
 -TRANSACTION OBJECT (MVP)
 
 SQL/TABLES
