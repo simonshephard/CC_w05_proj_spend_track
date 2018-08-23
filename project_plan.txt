@@ -104,17 +104,30 @@ DONE-views
 DONE---layout.erb
 
 OBJECTS
+
 -MERCHANT OBJECT (MVP)
+Properties
+DONE---id
+DONE---name
+Methods
+DONE---initialize
+DONE---reader(name,id)
+DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
+---get transactions/tags
+
 -TAG OBJECT (MVP)
 -TRANSACTION OBJECT (MVP)
 
 SQL/TABLES
+
 DONE-merchants table (MVP)
 DONE---id
 DONE---name
+
 DONE-tags table (MVP)
 DONE---id
 DONE---name
+
 DONE-transactions table (MVP)
 DONE---id
 DONE---amount
