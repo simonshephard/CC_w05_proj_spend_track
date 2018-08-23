@@ -1,18 +1,14 @@
 
 
-
-
-BRAINSTORMING
-
-PROJECT PLAN
+ROUGH OUTLINE PLAN
 
 -Overall outline of activity
----Planning - high-level outline, brainstorming, and rough plan and timings
----Scoping - UX plus - personas, user needs, user journeys
----Design - product plan - objects, tables, files, properties, methods, wireframe frontend
----Develop - db, objects, sinatra, html/css
----Presentation - generate and prepare - develop during process
----PDA - gather evidence - develop during
+---1.Planning - high-level outline, brainstorming, and rough plan and timings
+---2.Scoping - UX plus - personas, user needs, user journeys
+---3.Design - product plan - objects, tables, files, properties, methods, wireframe frontend
+---4.Develop - db, objects, sinatra, html/css
+---5.Presentation - generate and prepare - develop during process
+---6.PDA - gather evidence - develop during
 
 -Rough expected timings
 ---FRI - planning and some prep for scoping and design
@@ -21,61 +17,93 @@ PROJECT PLAN
 ---MON - complete scoping and design and begin development
 ---TUE - develop
 ---WED - develop
----THU - final development and
----FRI
+---THU - final development and complete presentation
+---FRI - presentation
 
-PDA REQUIREMENTS
--check requirements
 
-split goals by MVP extensions - could haves etc
+1.PLANNING
+
+TO DO
+-DONErough outline and timing
+-DONEcreate git/github repo
+-DONEcomplete homework form to submit link to repo
+-generate more detailed plan for each high level area
+-consider what other activity is required
+-get proto-MVP up and running asap
+
+TO CONSIDER
+-split goals by MVP/extensions/etc - must/should/could haves etc
+-trello - moscow board - goals (must have, should haves, could haves, not this time)
+-trello - kanban board - micro task management (to do, done etc)
+-presentation - prezzi - mac version
+
+
+2.SCOPING
 
 3 personas - student needs to save, richer saving for something, XYZ something else
-
 uses phone - mobile first
 no controls on spending
-
 student - spending limited
 office worker - saving for something
-
 spending limit
 spending goal
 versus income - need to be able to add positive amounts!!
-
-repeat transaction
-
-trello - moscow board - goals (must have, should haves, could haves, not this time)
-trello - kanban board - micro task management (to do, done etc)
-
-presentation - prezzi - mac version
+repeat transactions??
 
 check these out?? and other apps
 Inspired by -Monzo, MoneyDashboard, lots of mobile/online banking apps
 
 
-PROJECT ITEMS
--MERCHANT OBJECT (MVP)
--TAG OBJECT (MVP)
--TRANSACTION OBJECT (MVP)
--merchants table (MVP)
--tags table (MVP)
--transactions table (MVP)
+3.DESIGN
 
-DISPLAYS
+Object diagrams
+SQL/table diagrams
+
+
+4.DEVELOP
+
+-FILES
+---createdb spending_tracker
+---db sql-tables, runner for queries, seed file for testing
+---specs for testing
+---objects/models
+---public/css/images
+---controllers
+---views
+
+-PROJECT ITEMS
+---MERCHANT OBJECT (MVP)
+---TAG OBJECT (MVP)
+---TRANSACTION OBJECT (MVP)
+---merchants table (MVP)
+---tags table (MVP)
+---transactions table (MVP)
+
+VIEWS/DISPLAYS
 -All transactions - amount, merchant, tag, overall total (MVP)
 
 
-ORIGINAL SPECS
+5.PRESENTATION
 
-Spending Tracker
--Build an app that allows a user to track their spending.
+GOALS
+OK-Presentations Friday
+OK-10 minutes to present + 5 minutes for questions
 
-MVP
--The app should allow the user to create, edit and delete merchants, e.g. Tesco, Amazon, ScotRail
--The app should allow the user to create, edit and delete tags for their spending, e.g. groceries, entertainment, transport
--The user should be able to assign tags and merchants to a transaction, as well as an amount spent on each transaction.
--The app should display all the transactions a user has made in a single view, with each transaction's amount, merchant and tag, and a total for all transactions.
+EXPECTATION
+-Show your sketches, notes, diagrams, wireframes and user planning
+-Demonstrate your app's functionality
+-Talk about some code that you are particularly proud of
+-Highlight your main learning points
+OK-Do not - talk through every single line of code or go over the time limit
 
-EXTENSIONS
--Transactions should have a timestamp, and the user should be able to view transactions sorted by the time they took place.
--The user should be able to supply a budget, and the app should alert the user somehow when when they are nearing this budget or have gone over it.
--The user should be able to filter their view of transactions, for example, to view all transactions in a given month, or view all spending on groceries.
+OUTLINE
+-Project planning
+-Scope - UX
+-Design - objects/models etc
+-Demonstrate app
+-Code highlights
+-Learning points
+
+
+6.PDA REQUIREMENTS
+-check requirements
