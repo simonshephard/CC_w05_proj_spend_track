@@ -1,0 +1,140 @@
+
+
+0.ROUGH OUTLINE PLAN
+
+OVERALL OUTLINE PLAN
+-1.Plan - high-level outline, brainstorming, and rough then detailed plan and timings
+-2.Scope - UX plus - personas, user needs, user journeys
+-3.Design - product plan - objects, tables, files, properties, methods, wireframe frontend
+-4.Develop - db, objects, sinatra, html/css
+-5.Present - generate and prepare - develop during process
+-6.PDA - gather evidence - develop during
+
+ROUGH EXPECTED INITIAL TIMINGS
+-In general try to get working MVP up and running asap
+-FRI - plan / scope / design
+-SAT - plan / initial present and PDA, initial develop
+-SUN - scope / present / develop
+-MON - finish scope / design and develop
+-TUE - develop
+-WED - develop
+-THU - final develop and complete presentation
+-FRI - present
+
+
+1.PLAN
+
+TO DO
+DONE-rough outline and timing
+DONE-create git/github repo
+DONE-complete homework form to submit link to repo
+DONE-generate more detailed plan for each high level area
+DONE-set up project management file - might just do in this file
+-consider what other activity might be required
+-split design goals by MVP/extensions/etc - must/should/could haves etc
+-consider trello - moscow board? - goals (must have, should haves, could haves, not this time)
+-consider trello - kanban board? - micro task management (to do, done etc)
+-consider presentation - prezzi - mac version
+
+GOALS
+-get detailed plan
+-consider all the possibilities
+-project goal to get proto-MVP up and running asap
+-do presentation and PDA during process
+
+
+2.SCOPE
+
+TO DO
+-more detailed scoping - review apps
+-personas in presentation
+-user needs in presentation
+-user journeys in presentation
+
+GOALS
+-consider requirements and potential requirements
+-detailed personas, user needs, user journeys
+-try to do directly in presentation??
+-cover MVP
+-cover Extensions
+-consider further capability - review apps - Monzo, MoneyDashboard, lots of mobile/online banking apps
+
+PERSONAS
+-student needs to save, richer saving for something, XYZ something els
+uses phone - mobile first
+no controls on spending
+student - spending limited
+office worker - saving for something
+spending limit
+spending goal
+versus income - need to be able to add positive amounts!!
+repeat transactions??
+
+USER NEEDS
+
+USER JOURNEYS
+
+
+3.DESIGN
+
+TO DO
+-object diagrams
+-table diagrams
+-view wireframes??
+-try to diagram directly in presentation??
+
+OBJECTS
+-MERCHANT OBJECT (MVP)
+-TAG OBJECT (MVP)
+-TRANSACTION OBJECT (MVP)
+
+SQL/TABLES
+-merchants table (MVP)
+-tags table (MVP)
+-transactions table (MVP)
+
+VIEWS/DISPLAYS
+-All transactions - amount, merchant, tag, overall total (MVP)
+
+
+4.DEVELOP
+
+TO DO
+-set up MVP asap
+-createdb spending_tracker
+-db sql-tables, runner for queries, seed file for testing
+-specs for testing
+-objects/models
+-public/css/images
+-controllers
+-views
+
+
+5.PRESENTATION
+
+TO DO
+DONE-rough outline presentation - see below
+-choose (mac?) and set up presentation file
+-try to do UX directly in presentation
+
+GOALS
+-Presentations Friday - 10 minutes to present + 5 minutes for questions
+-Show your sketches, notes, diagrams, wireframes and user planning
+-Demonstrate your app's functionality
+-Talk about some code that you are particularly proud of
+-Highlight your main learning points
+-Do not talk through every single line of code or go over the time limit
+
+OUTLINE PRESENTATION
+-Plan
+-Scope - UX
+-Design - objects/models etc
+-Demonstrate app
+-Code highlights
+-Learning points
+
+
+6.PDA REQUIREMENTS
+
+TO DO
+-check requirements
