@@ -4,14 +4,14 @@
 
 OVERALL OUTLINE PLAN
 -1.Plan - high-level outline, brainstorming, and rough then detailed plan and timings
--2.Scope - UX plus - personas, user needs, user journeys
--3.Design - product plan - objects, tables, files, properties, methods, wireframe frontend
+-2.Scope - UX (personas, user needs, user journeys) plus must/could/should/not this time
+-3.Design - product - objects, tables, files, properties, methods, wireframe frontend
 -4.Develop - db, objects, sinatra, html/css
 -5.Present - generate and prepare - develop during process
 -6.PDA - gather evidence - develop during
 
 ROUGH EXPECTED INITIAL TIMINGS
--In general try to get working MVP up and running asap
+-Aim to get working MVP up and running asap
 -FRI - plan / scope / design
 -SAT - plan / initial present and PDA, initial develop
 -SUN - scope / present / develop
@@ -30,17 +30,15 @@ DONE-create git/github repo
 DONE-complete homework form to submit link to repo
 DONE-generate more detailed plan for each high level area
 DONE-set up project management file - might just do in this file
--consider what other activity might be required
--split design goals by MVP/extensions/etc - must/should/could haves etc
 -consider trello - moscow board? - goals (must have, should haves, could haves, not this time)
 -consider trello - kanban board? - micro task management (to do, done etc)
 -consider presentation - prezzi - mac version
 
 GOALS
--get detailed plan
--consider all the possibilities
--project goal to get proto-MVP up and running asap
--do presentation and PDA during process
+-get rough and then detailed plan
+-consider all the possibilities for app
+-aim to get prototype-MVP up and running asap
+-aim to do presentation and PDA during process
 
 
 2.SCOPE
@@ -50,6 +48,8 @@ TO DO
 -personas in presentation
 -user needs in presentation
 -user journeys in presentation
+-consider what other activity might be required
+-split design goals by MVP/extensions/etc - must/should/could haves etc
 
 GOALS
 -consider requirements and potential requirements
@@ -58,6 +58,7 @@ GOALS
 -cover MVP
 -cover Extensions
 -consider further capability - review apps - Monzo, MoneyDashboard, lots of mobile/online banking apps
+-identify must/should/could/not this time
 
 PERSONAS
 -student needs to save, richer saving for something, XYZ something els
@@ -78,10 +79,29 @@ USER JOURNEYS
 3.DESIGN
 
 TO DO
+DONE-folder/file structure
 -object diagrams
 -table diagrams
 -view wireframes??
 -try to diagram directly in presentation??
+-review folder/file structure for other objects
+
+FOLDER/FILE STRUCTURE
+DONE-controllers
+DONE-controller.rb (main contoller at top level for now)
+DONE-db
+DONE---seeds.rb
+DONE---sql_runner.rb
+DONE---spending_tracker.sql
+DONE-models
+DONE---merchant
+DONE---tag
+DONE---transaction
+DONE-public
+DONE---style.css - may change later
+DONE-specs
+DONE-views
+DONE---layout.erb
 
 OBJECTS
 -MERCHANT OBJECT (MVP)
@@ -89,9 +109,19 @@ OBJECTS
 -TRANSACTION OBJECT (MVP)
 
 SQL/TABLES
--merchants table (MVP)
--tags table (MVP)
--transactions table (MVP)
+DONE-merchants table (MVP)
+DONE---id
+DONE---name
+DONE-tags table (MVP)
+DONE---id
+DONE---name
+DONE-transactions table (MVP)
+DONE---id
+DONE---amount
+TODO---date
+DONE---merchant_id
+DONE---tag_id
+
 
 VIEWS/DISPLAYS
 -All transactions - amount, merchant, tag, overall total (MVP)
@@ -100,14 +130,22 @@ VIEWS/DISPLAYS
 4.DEVELOP
 
 TO DO
--set up MVP asap
--createdb spending_tracker
--db sql-tables, runner for queries, seed file for testing
+DONE-set up folder/file structure
+DONE-createdb spending_tracker
+DONE-psql -d spending_tracker -f db/spending_tracker.sql
+DONE-db sql-tables, runner for queries
+DONE-amount to numeric
+-add date to transaction
+-seed file for testing
 -specs for testing
 -objects/models
 -public/css/images
 -controllers
 -views
+
+GOALS
+-set up MVP asap
+-identify and iteratively add functionality / styling
 
 
 5.PRESENTATION

@@ -3,7 +3,7 @@
 THURSDAY 20180823
 -1.Plan - overview, detailed plan completed, set up git/github and completed hw form
 -2.Scope - brainstormed, rough outline
--3.Design - rough outline
--4.Develop - rough outline
+-3.Design - rough outline, folder/file structure, sqltables
+-4.Develop - rough outline, folder/file structure, database, sqlrunner, sqltables
 -5.Present - rough outline
 -6.PDA - none
