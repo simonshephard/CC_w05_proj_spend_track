@@ -1,0 +1,28 @@
+body {
+  background-color: white;
+  color: darkblue;
+  font-family: Helvetica, sans-serif;
+}
+/* .div-link {
+  text-decoration: none;
+} */
+/* .div-button {
+  width: 100px;
+  height: 50px;
+  border: 1px solid darkgrey;
+  background: lightgrey;
+  color: darkblue;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.div-button:hover {
+  background: darkblue;
+  color: white;
+  cursor: pointer;
+}
+.div-button:active {
+  background: red;
+  color: darkblue;
+} */

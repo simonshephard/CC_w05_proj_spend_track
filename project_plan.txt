@@ -173,13 +173,18 @@ DONE-createdb spending_tracker
 DONE-psql -d spending_tracker -f db/spending_tracker.sql
 DONE-db sql-tables, runner for queries
 DONE-amount to numeric
--add date to transaction
--seed file for testing
+DONE-objects/models
+DONE-seed file for testing
+-review models
+---add date to transaction
+---additional methods
 -specs for testing
--objects/models
 -public/css/images
--controllers
--views
+DONE-main controller
+-other controllers
+DONE-simple layout view
+DONE-index - transactions view
+-other views
 
 GOALS
 -set up MVP asap
