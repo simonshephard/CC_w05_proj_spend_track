@@ -1,5 +1,25 @@
 
 
+
+
+FRIDAY 20180824
+-1.Plan -
+-2.Scope -
+-3.Design -
+-4.Develop - Transaction show and partial create and new
+-5.Present -
+-6.PDA -
+
+NOTES
+-need separate views for transactions merchants
+-so then need to separate out controllers and folders
+-need to automate merchant lookup as per zombies
+-get REST names right
+-transaction needs a name
+-broke when moved - think need app controller if move into folder!!
+-DO VIEW
+
+
 THURSDAY 20180823
 -1.Plan - overview, detailed plan completed, set up git/github and completed hw form
 -2.Scope - brainstormed, rough outline, some more detail added

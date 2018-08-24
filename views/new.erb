@@ -8,12 +8,20 @@
   <!-- <label for="merchant_id">Merchant:</label>
   <input id="merchant_id" type="text" name="merchant_id"> -->
 
-  <!-- Make this automatic from list as per zombies -->
   <label for="merchant_id">Select a merchant:</label>
   <select id="merchant_id" name="merchant_id">
-    <option value=1>Merchant1</option>
-    <option value=2>Merchant2</option>
+    <% for merchant in @merchants %>
+      <option value="<%= merchant.id %>"><%= merchant.name %></option>
+    <% end %>
   </select>
+
+  <label for="tag_id">Select a tag:</label>
+  <select id="tag_id" name="tag_id">
+    <% for tag in @tags %>
+      <option value="<%= tag.id %>"><%= tag.name %></option>
+    <% end %>
+  </select>
+
 
   <input type='submit' value="Enter Transaction"/>
 </form>

@@ -2,6 +2,8 @@ require("sinatra")
 require("sinatra/contrib/all")
 require("pry-byebug")
 require_relative("./models/transaction")
+require_relative("./models/tag")
+require_relative("./models/merchant")
 also_reload("./models/*")
 
 
@@ -18,6 +20,8 @@ end
 
 # NEW - above show to avoid conflict
 get '/transactions/new' do
+  @tags = Tag.all
+  @merchants = Merchant.all
   erb(:new)
 end
 
@@ -32,5 +36,26 @@ end
 post '/transactions' do
   transaction = Transaction.new(params)
   transaction.save
+  redirect to '/transactions'
+end
+
+# EDIT
+get '/transactions/:id/edit' do
+  id = params[:id]
+  @transaction = Transaction.find(id)
+  erb(:edit)
+end
+
+# UPDATE
+post '/transactions/:id' do
+  transaction = Transaction.new(params)
+  transaction.update
+  redirect to "/pizza-orders/#{transaction.id}"
+end
+
+# DELETE
+post '/transactions/:id/delete' do
+  transaction = Transaction.find(params[:id])
+  transaction.delete
   redirect to '/transactions'
 end
