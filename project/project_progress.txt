@@ -17,7 +17,7 @@ DONE-need to automate merchant lookup as per zombies
 DONE-get REST names right - index/new/create/show/edit/update/destroy
 DONE-broke when moved - think need app controller if move into folder!!
 DONE-add merchant and tag methods to transaction to use in views
-OK-remember to restart app when change requires
+OK-remember to restart app when change to require statements
 -transaction needs a name/description
 -need to do total balance
 -UX pin website??

@@ -58,6 +58,12 @@ class Transaction
     Transaction.new(data.first)
   end
 
+  def self.total
+    sql = "SELECT SUM(amount) FROM transactions"
+    data = SqlRunner.run(sql)
+    data.first["sum"]
+  end
+
   def merchant
     sql = "SELECT * FROM merchants
     WHERE id = $1"
