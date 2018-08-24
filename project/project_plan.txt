@@ -112,7 +112,7 @@ DONE-views
 DONE---layout.erb
 DONE---index.erb
 DONE---home.erb
----other views****
+DONE---other views****
 
 OBJECTS
 

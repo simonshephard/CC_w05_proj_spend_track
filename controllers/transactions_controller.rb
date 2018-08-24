@@ -1,36 +1,30 @@
 require("sinatra")
 require("sinatra/contrib/all")
 require("pry-byebug")
-require_relative("./models/transaction")
-require_relative("./models/tag")
-require_relative("./models/merchant")
-also_reload("./models/*")
+require_relative("../models/transaction")
+require_relative("../models/tag")
+require_relative("../models/merchant")
+also_reload("../models/*")
 
-
-# HOME
-get "/" do
-  erb(:home)
-end
 
 # INDEX
 get "/transactions" do
   @transactions = Transaction.all
-  erb(:index)
+  erb(:"transactions/index")
 end
 
-# NEW - above show to avoid conflict
+# NEW
 get '/transactions/new' do
   @tags = Tag.all
   @merchants = Merchant.all
-  erb(:new)
+  erb(:"transactions/new")
 end
 
 # SHOW
 get '/transactions/:id' do
   @transaction = Transaction.find(params[:id])
-  erb(:show)
+  erb(:"transactions/show")
 end
-# what are standard REST for show / create
 
 # CREATE
 post '/transactions' do
@@ -44,8 +38,7 @@ get '/transactions/:id/edit' do
   @tags = Tag.all
   @merchants = Merchant.all
   @transaction = Transaction.find(params[:id])
-  print @transaction
-  erb(:edit)
+  erb(:"transactions/edit")
 end
 
 # UPDATE
