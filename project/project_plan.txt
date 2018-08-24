@@ -4,11 +4,12 @@
 
 OVERALL OUTLINE PLAN
 -1.Plan - high-level outline, brainstorming, and rough then detailed plan and timings
--2.Scope - UX (personas, user needs, user journeys) plus must/could/should/not this time
+-2.Scope - UX (personas, user needs, user journeys) plus must/should/could/would(but not this time)
 -3.Design - product - objects, tables, files, properties, methods, wireframe frontend
 -4.Develop - db, objects, sinatra, html/css
--5.Present - generate and prepare - develop during process
--6.PDA - gather evidence - develop during
+-5.Test - TDD, try to break!
+-6.Present - generate and prepare - develop during process
+-7.PDA - gather evidence - develop during
 
 ROUGH EXPECTED INITIAL TIMINGS
 DONE-Aim to get working MVP up and running asap
@@ -32,14 +33,15 @@ DONE-complete homework form to submit link to repo
 DONE-generate more detailed plan for each high level area
 DONE-set up project management file - might just do in this file
 DONE-consider presentation - prezzi - mac keynote
--consider trello - moscow board? - goals (must have, should haves, could haves, not this time)
--consider trello - kanban board? - micro task management (to do, done etc)
+DONE-consider trello - moscow board? - must/should/could/would(but not this time)
+DONE-consider trello - kanban board? - micro task management (to do, done etc)
+TODO-look at trello separately fof future if time - happy with current approach for now
 
 GOALS
--get rough and then detailed plan
--consider all the possibilities for app
--aim to get prototype-MVP up and running asap
--aim to do presentation and PDA during process
+DONE-get rough and then detailed plan
+TODO-consider all the possibilities for app
+DONE-aim to get prototype-MVP up and running asap
+DONE-aim to do presentation and PDA during process
 
 
 2.SCOPE
@@ -50,13 +52,13 @@ TO DO
 -user needs in presentation
 -user journeys in presentation
 -consider what other activity might be required
--split design goals by MVP/extensions/etc - must/should/could haves etc
+-split design goals by MVP/extensions/etc - must/should/could/would(but not this time)
 
 GOALS
 -consider requirements and potential requirements
 -detailed personas, user needs, user journeys
 -try to do directly in presentation??
--cover MVP
+DONE-cover MVP
 -cover Extensions
 -consider further capability - review apps - Monzo, MoneyDashboard, lots of mobile/online banking apps
 -identify must/should/could/not this time
@@ -111,8 +113,7 @@ DONE-specs
 DONE-views
 DONE---layout.erb
 DONE---index.erb
-DONE---home.erb
-DONE---other views****
+DONE---index/new/show/edit for each other view
 
 OBJECTS
 
@@ -124,7 +125,7 @@ Methods
 DONE---initialize
 DONE---reader(name,id)
 DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
----get transactions/tags
+---get transactions/tags???
 ---self.delete(id)???
 
 -TAG OBJECT (MVP)
@@ -135,7 +136,7 @@ Methods
 DONE---initialize
 DONE---reader(name,id)
 DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
----get transactions/merchants
+---get transactions/merchants???
 ---self.delete(id)???
 
 -TRANSACTION OBJECT (MVP)
@@ -149,8 +150,9 @@ Methods
 DONE---initialize
 DONE---reader(id,amount,merchant_id,tag_id) - EXPOSE ALL FOR NOW
 DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
-DONE___tags
-DONE___merchants
+DONE---tags
+DONE---merchants
+DONE---total
 ---self.delete(id)???
 
 
@@ -175,7 +177,7 @@ DONE---tag_id
 
 VIEWS/DISPLAYS
 DONE-All transactions - amount, merchant, tag
-TODO-overall total (MVP)
+DONE-overall total (MVP)
 DONE-simple layout
 DONE-simple home
 DONE-REST views for each model - index/new/show/edit
@@ -198,16 +200,23 @@ DONE-transactions_controller
 DONE-other controllers - app, tags, merchant
 DONE-basic CRUD views - index, new, show, edit
 DONE-additional methods required beyond CRUD - tags, merchants for transaction
--add date to transaction
+TODO-add date to transaction
 -specs for testing
--review ALL!!
+-review ALL re further extensions
 
 GOALS
 DONE-set up MVP asap
 -identify and iteratively add functionality / styling
 
 
-5.PRESENTATION
+5.TEST
+
+GOALS
+-do TDD where feasible
+-try to break anything I build!
+
+
+6.PRESENT
 
 TO DO
 DONE-rough outline presentation - see below
@@ -231,7 +240,37 @@ DONE-Code highlights
 DONE-Learning points
 
 
-6.PDA REQUIREMENTS
+7.PDA REQUIREMENTS
 
 TO DO
--check requirements*****
+DONE-check requirements
+
+REQUIREMENTS FOR PDA - WEEK 5 AND 6
+-A Use Case Diagram
+-A Class Diagram
+-An Object Diagram
+-An Activity Diagram
+-Produce an Implementations Constraints plan detailing the following factors:
+---Hardware and software platforms
+---Performance requirements
+---Persistent storage and transactions
+---Usability
+---Budgets
+---Time
+-User Site Map
+-2 Wireframe Diagrams
+-Example of Pseudocode used for a method
+-Show user input being processed according to design requirements. Take a screenshot of:
+---The user inputting something into your program
+---The user input being saved or used in some way
+-Show an interaction with data persistence. Take a screenshot of:
+---Data being inputted into your program
+---Confirmation of the data being saved
+-Show the correct output of results and feedback to user. Take a screenshot of:
+---The user requesting information or an action to be performed
+---The user request being processed correctly and demonstrated in the program
+-Take a screenshot of one of your projects where you have worked alone and attach the Github link.
+-Take screenshots or photos of your planning and the different stages of development to show changes.
+
+PDF with examples is in here:
+https://github.com/codeclan/pda/blob/master/PDA%20Lessons/Lesson%201%20-%20Planning%20Lesson%20(updated).pdf
