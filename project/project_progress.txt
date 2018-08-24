@@ -3,27 +3,26 @@
 
 
 FRIDAY 20180824
--1.Plan -
+-1.Plan - updated plan
 -2.Scope -
--3.Design - transaction controller, merchant/tag methods
--4.Develop - transaction controller index/new/create/show/edit/update/destroy
--5.Present -
+-3.Design - transaction controller and views, merchant/tag methods, merchants and tag controllers and views
+-4.Develop - all controllers and views index/new/create/show/edit/update/destroy
+-5.Present - set up presentation file with
 -6.PDA -
 
 NOTES
--need separate views for transactions merchants
--so then need to separate out controllers and folders
+DONE-need separate views for transactions merchants
+DONE-so then need to separate out controllers and folders
 DONE-need to automate merchant lookup as per zombies
 DONE-get REST names right - index/new/create/show/edit/update/destroy
--transaction needs a name
--broke when moved - think need app controller if move into folder!!
--DO VIEW
+DONE-broke when moved - think need app controller if move into folder!!
+DONE-add merchant and tag methods to transaction to use in views
+OK-remember to restart app when change requires
+-transaction needs a name/description
 -need to do total balance
--added merchant and tag methods to transaction to use in views
 -UX pin website??
 -format amount in views - pretty_price??
 -do delete/find as class method??
--remember to restart app when change requires
 
 
 THURSDAY 20180823

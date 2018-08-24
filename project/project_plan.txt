@@ -11,9 +11,9 @@ OVERALL OUTLINE PLAN
 -6.PDA - gather evidence - develop during
 
 ROUGH EXPECTED INITIAL TIMINGS
--Aim to get working MVP up and running asap
--THU - plan / scope / design / initial develop
--FRI - plan / scope / design / initial develop
+DONE-Aim to get working MVP up and running asap
+DONE-THU - plan / scope / design / initial develop
+DONE-FRI - plan / scope / design / initial develop
 -SAT - plan / initial present and PDA, develop
 -SUN - scope / present / develop
 -MON - finish scope / design and develop
@@ -31,9 +31,9 @@ DONE-create git/github repo
 DONE-complete homework form to submit link to repo
 DONE-generate more detailed plan for each high level area
 DONE-set up project management file - might just do in this file
+DONE-consider presentation - prezzi - mac keynote
 -consider trello - moscow board? - goals (must have, should haves, could haves, not this time)
 -consider trello - kanban board? - micro task management (to do, done etc)
--consider presentation - prezzi - mac keynote
 
 GOALS
 -get rough and then detailed plan
@@ -149,7 +149,8 @@ Methods
 DONE---initialize
 DONE---reader(id,amount,merchant_id,tag_id) - EXPOSE ALL FOR NOW
 DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
----get tags/merchants
+DONE___tags
+DONE___merchants
 ---self.delete(id)???
 
 
@@ -166,14 +167,18 @@ DONE---name
 DONE-transactions table (MVP)
 DONE---id
 DONE---amount
+TODO___name
 TODO---date
 DONE---merchant_id
 DONE---tag_id
 
 
 VIEWS/DISPLAYS
--All transactions - amount, merchant, tag, overall total (MVP)
+DONE-All transactions - amount, merchant, tag
+TODO-overall total (MVP)
 DONE-simple layout
+DONE-simple home
+DONE-REST views for each model - index/new/show/edit
 
 
 4.DEVELOP
@@ -189,16 +194,16 @@ DONE-seed file for testing
 DONE-public/css/images
 DONE-simple layout view
 DONE-index - transactions view
-DONE-main controller
--other basic CRUD views*****
+DONE-transactions_controller
+DONE-other controllers - app, tags, merchant
+DONE-basic CRUD views - index, new, show, edit
+DONE-additional methods required beyond CRUD - tags, merchants for transaction
 -add date to transaction
--additional methods required beyond CRUD
 -specs for testing
--other controllers??
 -review ALL!!
 
 GOALS
--set up MVP asap
+DONE-set up MVP asap
 -identify and iteratively add functionality / styling
 
 
@@ -206,7 +211,7 @@ GOALS
 
 TO DO
 DONE-rough outline presentation - see below
--choose (mac?) and set up presentation file
+DONE-choose (mac?) and set up presentation file
 -try to do UX directly in presentation
 
 GOALS
@@ -218,12 +223,12 @@ GOALS
 -Do not talk through every single line of code or go over the time limit
 
 OUTLINE PRESENTATION
--Plan
--Scope - UX
--Design - objects/models/views etc
--Demonstrate app
--Code highlights
--Learning points
+DONE-Plan
+DONE-Scope - UX
+DONE-Design - objects/models/views etc
+DONE-Demonstrate app
+DONE-Code highlights
+DONE-Learning points
 
 
 6.PDA REQUIREMENTS
