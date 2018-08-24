@@ -1,0 +1,19 @@
+<h2>New Transaction</h2>
+
+<form method="post" action="/transactions">
+
+  <label for="amount">Amount:</label>
+  <input id="amount" type="text" name="amount" />
+
+  <!-- <label for="merchant_id">Merchant:</label>
+  <input id="merchant_id" type="text" name="merchant_id"> -->
+
+  <!-- Make this automatic from list as per zombies -->
+  <label for="merchant_id">Select a merchant:</label>
+  <select id="merchant_id" name="merchant_id">
+    <option value=1>Merchant1</option>
+    <option value=2>Merchant2</option>
+  </select>
+
+  <input type='submit' value="Enter Transaction"/>
+</form>

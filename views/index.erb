@@ -2,6 +2,6 @@
 
 <ul>
   <% @transactions.each do |transaction| %>
-  <li><%= transaction.amount %>, <%= transaction.merchant_id %>, <%= transaction.tag_id %></li>
+  <li><a href="/transactions/<%= transaction.id %>">Transaction Id: <%= transaction.id %></a>, Amount: <%= transaction.amount %>, Merchant: <%= transaction.merchant_id %>, Tag: <%= transaction.tag_id %> </li>
   <% end %>
 </ul>

@@ -12,8 +12,9 @@ OVERALL OUTLINE PLAN
 
 ROUGH EXPECTED INITIAL TIMINGS
 -Aim to get working MVP up and running asap
--FRI - plan / scope / design
--SAT - plan / initial present and PDA, initial develop
+-THU - plan / scope / design / initial develop
+-FRI - plan / scope / design / initial develop
+-SAT - plan / initial present and PDA, develop
 -SUN - scope / present / develop
 -MON - finish scope / design and develop
 -TUE - develop
@@ -61,19 +62,26 @@ GOALS
 -identify must/should/could/not this time
 
 PERSONAS
+1.spending limit
+2.spending goal
+3.be in control - more information
 -student needs to save, richer saving for something, XYZ something els
 uses phone - mobile first
 no controls on spending
 student - spending limited
 office worker - saving for something
-spending limit
-spending goal
 versus income - need to be able to add positive amounts!!
 repeat transactions??
 
 USER NEEDS
+-set limit
+-set goal
+-view details
 
 USER JOURNEYS
+-as a:
+-i want to be able to:
+-so that I can:
 
 
 3.DESIGN
@@ -102,6 +110,9 @@ DONE---style.css - may change later
 DONE-specs
 DONE-views
 DONE---layout.erb
+DONE---index.erb
+DONE---home.erb
+---other views****
 
 OBJECTS
 
@@ -175,16 +186,16 @@ DONE-db sql-tables, runner for queries
 DONE-amount to numeric
 DONE-objects/models
 DONE-seed file for testing
--review models
----add date to transaction
----additional methods
--specs for testing
--public/css/images
-DONE-main controller
--other controllers
+DONE-public/css/images
 DONE-simple layout view
 DONE-index - transactions view
--other views
+DONE-main controller
+-other basic CRUD views*****
+-add date to transaction
+-additional methods required beyond CRUD
+-specs for testing
+-other controllers??
+-review ALL!!
 
 GOALS
 -set up MVP asap
@@ -209,7 +220,7 @@ GOALS
 OUTLINE PRESENTATION
 -Plan
 -Scope - UX
--Design - objects/models etc
+-Design - objects/models/views etc
 -Demonstrate app
 -Code highlights
 -Learning points
@@ -218,4 +229,4 @@ OUTLINE PRESENTATION
 6.PDA REQUIREMENTS
 
 TO DO
--check requirements
+-check requirements*****
