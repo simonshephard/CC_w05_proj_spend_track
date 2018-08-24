@@ -18,7 +18,9 @@ NOTES
 -transaction needs a name
 -broke when moved - think need app controller if move into folder!!
 -DO VIEW
-
+-need to do total balance
+-added merchant and tag methods to transaction to use in views
+-UX pin
 
 THURSDAY 20180823
 -1.Plan - overview, detailed plan completed, set up git/github and completed hw form

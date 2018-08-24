@@ -33,7 +33,7 @@ DONE-generate more detailed plan for each high level area
 DONE-set up project management file - might just do in this file
 -consider trello - moscow board? - goals (must have, should haves, could haves, not this time)
 -consider trello - kanban board? - micro task management (to do, done etc)
--consider presentation - prezzi - mac version
+-consider presentation - prezzi - mac keynote
 
 GOALS
 -get rough and then detailed plan

@@ -6,9 +6,9 @@ class Transaction
 
   def initialize(options)
     @id = options["id"].to_i
-    @amount = options["amount"]
-    @merchant_id = options["merchant_id"]
-    @tag_id = options["tag_id"]
+    @amount = options["amount"].to_f
+    @merchant_id = options["merchant_id"].to_i
+    @tag_id = options["tag_id"].to_i
   end
 
   def save
@@ -56,6 +56,22 @@ class Transaction
     values = [id]
     data = SqlRunner.run(sql, values)
     Transaction.new(data.first)
+  end
+
+  def merchant
+    sql = "SELECT * FROM merchants
+    WHERE id = $1"
+    values = [@merchant_id]
+    data = SqlRunner.run(sql, values)
+    Merchant.new(data.first)
+  end
+
+  def tag
+    sql = "SELECT * FROM tags
+    WHERE id = $1"
+    values = [@tag_id]
+    data = SqlRunner.run(sql, values)
+    Tag.new(data.first)
   end
 
 end

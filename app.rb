@@ -44,7 +44,6 @@ get '/transactions/:id/edit' do
   @tags = Tag.all
   @merchants = Merchant.all
   @transaction = Transaction.find(params[:id])
-  print @transaction
   erb(:edit)
 end
 
@@ -52,7 +51,7 @@ end
 post '/transactions/:id' do
   transaction = Transaction.new(params)
   transaction.update
-  redirect to "/transactions/#{transaction.id}"
+  redirect to "/pizza-orders/#{transaction.id}"
 end
 
 # DELETE

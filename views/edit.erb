@@ -1,15 +1,16 @@
-<h2>New Transaction</h2>
+<h2>Edit Transaction <%= @transaction.id %></h2>
 
-<form method="post" action="/transactions">
+<form method="post" action="/transactions/<%= @transaction.id %>">
 
   <label for="amount">Amount:</label>
-  <input id="amount" type="text" name="amount" />
+  <input id="amount" type="text" name="amount" value=<%= @transaction.amount %> />
 
   <label for="merchant_id">Select a merchant:</label>
   <select id="merchant_id" name="merchant_id">
     <% for merchant in @merchants %>
       <option value="<%= merchant.id %>"><%= merchant.name %></option>
     <% end %>
+    <option selected="selected" value="<%= @transaction.merchant.id %>" > <%= @transaction.merchant.name %></option>
   </select>
 
   <label for="tag_id">Select a tag:</label>
@@ -17,7 +18,8 @@
     <% for tag in @tags %>
       <option value="<%= tag.id %>"><%= tag.name %></option>
     <% end %>
+    <option selected="selected" value="<%= @transaction.tag.id %>" ><%= @transaction.tag.name %></option>
   </select>
 
-  <input type='submit' value="Enter Transaction"/>
+  <input type='submit' value="Edit Transaction"/>
 </form>
