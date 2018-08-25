@@ -2,30 +2,63 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Spending Tracker</title>
+  <title>TrackSpend</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
-
 <body>
 
-  <h1>Spending Tracker</h1>
+<div id="content-container">
 
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/transactions">Transactions</a></li>
-      <li><a href="/transactions/new">New Transaction</a></li>
-      <li><a href="/merchants">Merchants</a></li>
-      <li><a href="/merchants/new">New Merchant</a></li>
-      <li><a href="/tags">Tags</a></li>
-      <li><a href="/tags/new">New Tag</a></li>
-    </ul>
-  </nav>
+  <div id="branding">
+    <h1>TrackSpend</h1>
+  </div>
 
-  <main>
+  <div id="nav-bar">
+    <div class="container">
+      <a class="div-link" href="/">
+        <div class="div-button">
+          Home
+        </div>
+      </a>
+      <a class="div-link" href="/transactions">
+        <div class="div-button">
+          Transactions
+        </div>
+      </a>
+      <a class="div-link" href="/transactions/new">
+        <div class="div-button">
+          New Transaction
+        </div>
+      </a>
+      <a class="div-link" href="/merchants">
+        <div class="div-button">
+          Merchants
+        </div>
+      </a>
+      <a class="div-link" href="/merchants/new">
+        <div class="div-button">
+          New Merchant
+        </div>
+      </a>
+      <a class="div-link" href="/tags">
+        <div class="div-button">
+          Tags
+        </div>
+      </a>
+      <a class="div-link" href="/tags/new">
+        <div class="div-button">
+          New Tag
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div id="data">
     <%= yield %>
-  </main>
+  </div>
+
+</div>
 
 </body>
-
 </html>
