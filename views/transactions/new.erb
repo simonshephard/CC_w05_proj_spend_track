@@ -3,22 +3,36 @@
 <form method="post" action="/transactions">
 
   <label for="amount">Amount:</label>
-  <input id="amount" type="text" name="amount" />
+  <input id="amount" class="input-text" type="text" name="amount" />
 
-  <label for="merchant_id">Select a merchant:</label>
-  <select id="merchant_id" name="merchant_id">
+  <label>Select a merchant:</label>
+  <div class="hidden-radio-dropdown">
+    <% first_item = true %>
     <% for merchant in @merchants %>
-      <option value="<%= merchant.id %>"><%= merchant.name %></option>
+      <% if first_item == true %>
+        <input type="radio" id="merchant<%= merchant.id %>" value="<%= merchant.id %>" class="hidden-radio-button" name="merchant_id" checked="checked">
+        <% first_item = false %>
+      <% else %>
+        <input type="radio" id="merchant<%= merchant.id %>" value="<%= merchant.id %>" class="hidden-radio-button" name="merchant_id">
+      <% end %>
+      <label for="merchant<%= merchant.id %>" class="hidden-radio-label"><div class="hidden-radio-div"><%= merchant.name %></div></label>
     <% end %>
-  </select>
+  </div>
 
-  <label for="tag_id">Select a tag:</label>
-  <select id="tag_id" name="tag_id">
+  <label>Select a tag:</label>
+  <div class="hidden-radio-dropdown">
+    <% first_item = true %>
     <% for tag in @tags %>
-      <option value="<%= tag.id %>"><%= tag.name %></option>
+      <% if first_item == true %>
+        <input type="radio" id="tag<%= tag.id %>" value="<%= tag.id %>" class="hidden-radio-button" name="tag_id" checked="checked">
+        <% first_item = false %>
+      <% else %>
+        <input type="radio" id="tag<%= tag.id %>" value="<%= tag.id %>" class="hidden-radio-button" name="tag_id">
+      <% end %>
+      <label for="tag<%= tag.id %>" class="hidden-radio-label"><div class="hidden-radio-div"><%= tag.name %></div></label>
     <% end %>
-  </select>
+  </div>
 
-  <input type='submit' value="Enter Transaction"/>
-  
+  <input class="input-submit" type="submit" value="Enter Transaction"/>
+
 </form>
