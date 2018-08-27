@@ -53,12 +53,13 @@ class Transaction
 
   def self.filter(params)
     transactions = Transaction.all
-    transactions = transactions.select {|transaction| transaction.date_time >= params["start_date_time"]} if params["start_date_time"]
-    transactions = transactions.select {|transaction| transaction.date_time <= params["end_date_time"]} if params["end_date_time"]
-    transactions = transactions.select {|transaction| transaction.amount >= params["min_amount"].to_f} if params["min_amount"]
-    transactions = transactions.select {|transaction| transaction.amount <= params["max_amount"].to_f} if params["max_amount"]
-    transactions = transactions.select {|transaction| transaction.merchant_id == params["merchant_id"].to_i} if params["merchant_id"].to_i > -1
-    transactions = transactions.select {|transaction| transaction.tag_id == params["tag_id"].to_i} if params["tag_id"].to_i > -1
+    transactions = transactions.select {|transaction| transaction.date_time >= params[:start_date_time]} if params[:start_date_time] != ""
+    transactions = transactions.select {|transaction| transaction.date_time <= params[:end_date_time]} if params[:end_date_time] != ""
+    transactions = transactions.select {|transaction| transaction.amount >= params[:min_amount].to_f} if params[:min_amount] != ""
+    transactions = transactions.select {|transaction| transaction.amount <= params[:max_amount].to_f} if params[:max_amount] != ""
+    transactions = transactions.select {|transaction| transaction.merchant_id == params[:merchant_id].to_i} if params[:merchant_id].to_i > -1
+    transactions = transactions.select {|transaction| transaction.tag_id == params[:tag_id].to_i} if params[:tag_id].to_i > -1
+    return transactions
   end
 
   def self.delete_all

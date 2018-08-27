@@ -30,7 +30,15 @@ end
 
 # INDEX - FILTER
 get "/transactions/filtered" do
+  print "\n"
+  print "PARAMS"
+  print params
+  print "\n"
   @transactions = Transaction.filter(params)
+  print "\n"
+  print "TRANSACTIONS"
+  print @transactions
+  print "\n"
   # @total = Transaction.total
   # need to total just filtered - just do sum_by??
   erb(:"transactions/index")

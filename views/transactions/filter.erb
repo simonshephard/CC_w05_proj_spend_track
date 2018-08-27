@@ -9,14 +9,14 @@
   <input id="end_date_time" type="datetime-local" name="end_date_time" />
 
   <label for="min_amount">MinAmount:</label>
-  <input id="min_amount" class="input-text" type="text" name="min_amount" />
+  <input id="min_amount" class="input-text" type="text" name="min_amount" value="" />
 
   <label for="max_amount">MaxAmount:</label>
-  <input id="max_amount" class="input-text" type="text" name="max_amount" />
+  <input id="max_amount" class="input-text" type="text" name="max_amount" value="" />
 
   <label for="merchant_id">Select a merchant:</label>
   <select id="merchant_id" name="merchant_id">
-    <option value="-1" disabled>--</option>
+    <option selected="selected" value="-1" >--</option>
     <% for merchant in @merchants %>
       <option value="<%= merchant.id %>"><%= merchant.name %></option>
     <% end %>
@@ -24,7 +24,7 @@
 
   <label for="tag_id">Select a tag:</label>
   <select id="tag_id" name="tag_id">
-    <option value="-1" disabled>--</option>
+    <option selected="selected" value="-1" >--</option>
     <% for tag in @tags %>
       <option value="<%= tag.id %>"><%= tag.name %></option>
     <% end %>
