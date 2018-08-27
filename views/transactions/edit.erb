@@ -2,6 +2,9 @@
 
 <form method="post" action="/transactions/<%= @transaction.id %>">
 
+  <label for="date_time">Date-time:</label>
+  <input id="date_time" type="datetime-local" name="date_time" value=<%= @transaction.date_time %> />
+
   <label for="amount">Amount:</label>
   <input id="amount" class="input-text" type="text" name="amount" value=<%= @transaction.amount %> />
 

@@ -1,6 +1,6 @@
 <h2>Transaction Id: <%= @transaction.id %></h2>
 
-<div><a href="/transactions/<%= @transaction.id %>">Transaction Id: <%= @transaction.id %></a>, Amount: <%= @transaction.amount %>, Description: <%= @transaction.description %>, Merchant: <%= @transaction.merchant.name %>, Tag: <%= @transaction.tag.name %> </div>
+<div><a href="/transactions/<%= @transaction.id %>">Transaction Id: <%= @transaction.id %></a>, Date-time: <%= @transaction.date_time %>, Amount: <%= @transaction.amount %>, Description: <%= @transaction.description %>, Merchant: <%= @transaction.merchant.name %>, Tag: <%= @transaction.tag.name %> </div>
 
 <form method="get" action="/transactions/<%= @transaction.id %>/edit">
   <input class="input-submit" type='submit' value="Edit Transaction"/>

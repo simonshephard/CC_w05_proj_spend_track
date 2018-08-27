@@ -2,26 +2,26 @@
 
 MONDAY 20180827
 -1.Plan -
--2.Scope -
+-2.Scope - split must/should/could/would to identify next key steps
 -3.Design -
--4.Develop -
+-4.Develop - add description, amend tag/merchant id to name
 -5.Present -
 -6.PDA -
 
 NOTES
+DONE-transaction needs a name/description
+DONE-use tag/merchant method on transaction to get name
+DONE-what are key things to add - what do I want app to do - where to focus - MVP/Extensions/charts-analysis-css/gamify
+TODO-EXTENSIONS-datetimestamp, sort by time, filter by XYZ, budget and alert
+TODO-improve CSS/HTML - table
 -back to xxx button on edit or save or cancel something
 -have default "--" or "other" tag and merchant that can be entered for new - need to make unable to delete
--pretty price
 -grid or flex to align tables and inputs
--transaction needs a name/description
 -need to do balance and targets
 -format amount in views - pretty_price??
 -do delete/find as class method??
-TODO-what are key things to add - what do I want app to do - where to focus
-TODO-EXTENSIONS-datetimestamp, sort by time, filter by XYZ, budget and alert
-TODO-improve CSS/HTML - table
 -remove on cascade delete - move transactions to default tag/merchant
-DONE-use tag/merchant method on transaction to get name
+
 
 SUNDAY 20180826
 -4.Develop - css hidden radio dropdown for form and do some additional styling, separate out styles

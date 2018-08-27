@@ -94,8 +94,8 @@ SHOULD
 COULD
 -charts
 -better css - dropdown etc
+-validation - restrict entry types
 WOULD (BUT NOT THIS TIME)
--more functionality
 -additional charts / analysis
 -gamify budgetting/saving
 
