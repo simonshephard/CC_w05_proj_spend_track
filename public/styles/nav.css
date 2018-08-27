@@ -1,0 +1,29 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.div-link {
+  text-decoration: none;
+}
+.div-button {
+  width: 100px;
+  height: 50px;
+  /* border: 1px solid darkgrey; */
+  background: lightgrey;
+  color: grey;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.div-button:hover {
+  background: grey;
+  color: lightgrey;
+  cursor: pointer;
+}
+.div-button:active {
+  background: orange;
+  color: darkblue;
+}

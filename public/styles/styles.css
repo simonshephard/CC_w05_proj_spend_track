@@ -13,7 +13,7 @@
   grid-template-areas:
             "branding"
             "nav-bar"
-            "data";
+            "table";
   grid-template-rows: 75px 50px 1fr;
   grid-template-columns: 1fr;
 }
@@ -30,40 +30,10 @@
   color: black;
 }
 
-#data {
+#data-section {
   padding-top: 20px;
   padding-left: 20px;
   background: white;
-  color: darkblue;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-}
-.div-link {
-  text-decoration: none;
-}
-.div-button {
-  width: 100px;
-  height: 50px;
-  /* border: 1px solid darkgrey; */
-  background: lightgrey;
-  color: grey;
-  line-height: 50px;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-}
-.div-button:hover {
-  background: grey;
-  color: lightgrey;
-  cursor: pointer;
-}
-.div-button:active {
-  background: orange;
   color: darkblue;
 }
 
