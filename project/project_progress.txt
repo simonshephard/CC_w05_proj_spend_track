@@ -3,8 +3,8 @@
 MONDAY 20180827
 -1.Plan -
 -2.Scope - split must/should/could/would to identify next key steps
--3.Design - description, date-time, sortby-time
--4.Develop - add description, amend tag/merchant id to name, add date-time as string
+-3.Design - description, date-time, sortby-time, filter_all
+-4.Develop - add description, amend tag/merchant id to name, add date-time as string, sort_by time, filter_all
 -5.Present - draft of scope slide as per above must/should/could/would
 -6.PDA -
 

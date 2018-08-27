@@ -10,37 +10,28 @@ also_reload("../models/*")
 # INDEX
 get "/transactions" do
   @transactions = Transaction.all
-  @total = Transaction.total
+  @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end
 
-# INDEX - SORT
+# INDEX - SORT BY TIME
 get "/transactions/sort_time" do
   @transactions = Transaction.sort_time
-  @total = Transaction.total
+  @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end
 
-# INDEX - FILTER
+# INDEX - FILTER FORM
 get "/transactions/filter" do
   @tags = Tag.all
   @merchants = Merchant.all
   erb(:"transactions/filter")
 end
 
-# INDEX - FILTER
+# INDEX - FILTERED
 get "/transactions/filtered" do
-  print "\n"
-  print "PARAMS"
-  print params
-  print "\n"
   @transactions = Transaction.filter(params)
-  print "\n"
-  print "TRANSACTIONS"
-  print @transactions
-  print "\n"
-  # @total = Transaction.total
-  # need to total just filtered - just do sum_by??
+  @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end
 
