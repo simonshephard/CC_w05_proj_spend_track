@@ -3,8 +3,8 @@
 MONDAY 20180827
 -1.Plan -
 -2.Scope - split must/should/could/would to identify next key steps
--3.Design - description, date-time, sortby-time, filter_all
--4.Develop - add description, amend tag/merchant id to name, add date-time as string, sort_by time, filter_all
+-3.Design - description, date-time, sortby-time, filter_all, budget and compare
+-4.Develop - add description, amend tag/merchant id to name, add date-time as string, sort_by time, filter_all, budget and compare
 -5.Present - draft of scope slide as per above must/should/could/would
 -6.PDA -
 
@@ -12,18 +12,23 @@ NOTES
 DONE-transaction needs a name/description
 DONE-use tag/merchant method on transaction to get name
 DONE-what are key things to add - what do I want app to do - where to focus - MVP/Extensions/charts-analysis-css/gamify
-TODO-EXTENSIONS-datetimestamp, sort by time, filter by XYZ, budget and alert
-TODO-improve CSS/HTML - table
--back to xxx button on edit or save or cancel something
--have default "--" or "other" tag and merchant that can be entered for new - need to make unable to delete
--grid or flex to align tables and inputs
--need to do balance and targets
+DONE-EXTENSIONS-datetimestamp, sort by time, filter by XYZ, budget and alert
+DONE-need to do balance and targets
+OKNO-remove on cascade delete - move transactions to default tag/merchant
+TODO-1.improve CSS/HTML - table? grid or flex to align tables and inputs
+TODO-2.charts/analysis
+TODO-object diagrams
 -format amount in views - pretty_price??
 -format date-time better in views
--do delete/find as class method??
--remove on cascade delete - move transactions to default tag/merchant
+-on delete tags - instead of removing ON DELETE CASCADE - check sure and list all the transactions it will delete - use filter
+-back to xxx button on edit or save or cancel something
+-have default "--" or "other" tag and merchant that can be entered for new - need to make unable to delete
 -add notes to design on process for updating description and date
 -remove delete from budget - and ids - just have a single budget??
+-remove some other functionality from budget??
+-refactor budget calc to put inside class not view
+-do delete/find as class method??
+
 
 SUNDAY 20180826
 -4.Develop - css hidden radio dropdown for form and do some additional styling, separate out styles

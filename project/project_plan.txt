@@ -17,7 +17,7 @@ DONE-THU - plan / scope / design / initial develop
 DONE-FRI - plan / scope / design / initial develop
 DONE-SAT - plan / initial present and PDA, develop
 DONE-SUN - scope / present / develop
--MON - finish scope / design and develop
+DONE-MON - finish scope / design and develop
 -TUE - develop
 -WED - develop
 -THU - final develop and complete presentation
@@ -70,12 +70,12 @@ DONE1.spending limit
 DONE2.spending goal
 DONE3.be in control - more information
 DONE-student needs to save, richer saving for something, XYZ something els
-DONEuses phone - mobile first
-DONEno controls on spending
-DONEstudent - spending limited
-DONEoffice worker - saving for something
-DONEversus income - need to be able to add positive amounts!!
-DONErepeat transactions??
+DONE-uses phone - mobile first
+DONE-no controls on spending
+DONE-student - spending limited
+DONE-office worker - saving for something
+DONE-versus income - need to be able to add positive amounts!!
+DONE-repeat transactions??
 
 USER NEEDS
 DONE-set limit
@@ -107,8 +107,8 @@ OK-table psql diagrams - NOT REQUIRED - outline in this
 DONE-view wireframes??
 DONE-try to diagram directly in presentation??
 DONE-review folder/file structure for other objects
+DONE-datetimestamp, sort by time, filter by XYZ, budget and alert
 TODO-object diagrams
-TODO-datetimestamp, sort by time, filter by XYZ, budget and alert
 
 FOLDER/FILE STRUCTURE
 DONE-controllers
@@ -139,8 +139,8 @@ Methods
 DONE---initialize
 DONE---reader(name,id)
 DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
----get transactions/tags???
----self.delete(id)???
+OKNO---get transactions/tags???
+OKNO---self.delete(id)???
 
 TAG OBJECT (MVP)
 Properties
@@ -150,14 +150,23 @@ Methods
 DONE---initialize
 DONE---reader(name,id)
 DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
----get transactions/merchants???
----self.delete(id)???
+OKNO---get transactions/merchants???
+OKNO---self.delete(id)???
+
+BUDGET OBJECT
+Properties
+DONE---id
+DONE---amount
+Methods
+DONE---initialize
+DONE---reader(amount,id)
+DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
 
 TRANSACTION OBJECT (MVP)
 Properties
 DONE---id
 DONE---amount
-TODO---date
+DONE---date
 DONE---merchant_id
 DONE---tag_id
 Methods
@@ -167,7 +176,7 @@ DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
 DONE---tags
 DONE---merchants
 DONE---total
----self.delete(id)???
+OKNO---self.delete(id)???
 
 
 SQL/TABLES
@@ -183,11 +192,14 @@ DONE---name
 DONE-transactions table (MVP)
 DONE---id
 DONE---amount
-TODO---description
-TODO---date
+DONE---description
+DONE---date
 DONE---merchant_id
 DONE---tag_id
 
+DONE-budgets table
+DONE---id
+DONE---amount
 
 VIEWS/DISPLAYS
 DONE-All transactions - amount, merchant, tag
@@ -195,6 +207,7 @@ DONE-overall total (MVP)
 DONE-simple layout
 DONE-simple home
 DONE-REST views for each model - index/new/show/edit
+DONE-added budgets
 
 
 4.DEVELOP
@@ -215,7 +228,7 @@ DONE-transactions_controller
 DONE-other controllers - app, tags, merchant
 DONE-basic CRUD views - index, new, show, edit
 DONE-additional methods required beyond CRUD - tags, merchants for transaction
-TODO-add date and description to transaction
+DONE-add date and description to transaction
 TODO-specs for testing
 TODO-review ALL re further extensions
 
