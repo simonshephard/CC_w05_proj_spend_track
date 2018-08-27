@@ -6,7 +6,7 @@ class Budget
 
   def initialize(options)
     @id = options["id"].to_i
-    @amount = options["amount"]
+    @amount = 0
   end
 
   def save

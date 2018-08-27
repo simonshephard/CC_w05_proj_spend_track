@@ -23,7 +23,7 @@ TODO-improve CSS/HTML - table
 -do delete/find as class method??
 -remove on cascade delete - move transactions to default tag/merchant
 -add notes to design on process for updating description and date
-
+-remove delete from budget - and ids - just have a single budget??
 
 SUNDAY 20180826
 -4.Develop - css hidden radio dropdown for form and do some additional styling, separate out styles

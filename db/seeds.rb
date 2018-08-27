@@ -11,7 +11,7 @@ Tag.delete_all
 Budget.delete_all
 
 
-budget1 = Budget.new({"amount" => "1000.00"})
+budget1 = Budget.new
 
 tag0 = Tag.new({"name" => "OTHER"})
 tag1 = Tag.new({"name" => "Food"})
