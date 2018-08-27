@@ -2,12 +2,15 @@ require("sinatra")
 require("sinatra/contrib/all")
 require("pry-byebug")
 require_relative("../models/budget")
+require_relative("../models/transaction")
 also_reload("../models/*")
 
 
 # INDEX
 get "/budgets" do
   @budgets = Budget.all
+  transactions = Transaction.all
+  @total = Transaction.total(transactions)
   erb(:"budgets/index")
 end
 

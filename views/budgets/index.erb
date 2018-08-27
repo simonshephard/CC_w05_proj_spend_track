@@ -3,3 +3,7 @@
 <% @budgets.each do |budget| %>
   <div><a href="/budgets/<%= budget.id %>">Budget Id: <%= budget.id %></a>, Amount: <%= budget.amount %> </div>
 <% end %>
+
+<h2>Transaction Total: <%= @total %></h2>
+<h2>Budget: <%= @budgets[0].amount %></h2>
+<h2>Capacity v Budget: <%=  @budgets[0].amount - @total %></h2>
