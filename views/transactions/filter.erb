@@ -1,0 +1,35 @@
+<h2>Filter Transactions</h2>
+
+<form method="get" action="/transactions/filtered">
+
+  <label for="start_date_time">StartDate-time:</label>
+  <input id="start_date_time" type="datetime-local" name="start_date_time" />
+
+  <label for="end_date_time">EndDate-time:</label>
+  <input id="end_date_time" type="datetime-local" name="end_date_time" />
+
+  <label for="min_amount">MinAmount:</label>
+  <input id="min_amount" class="input-text" type="text" name="min_amount" />
+
+  <label for="max_amount">MaxAmount:</label>
+  <input id="max_amount" class="input-text" type="text" name="max_amount" />
+
+  <label for="merchant_id">Select a merchant:</label>
+  <select id="merchant_id" name="merchant_id">
+    <option value="-1" disabled>--</option>
+    <% for merchant in @merchants %>
+      <option value="<%= merchant.id %>"><%= merchant.name %></option>
+    <% end %>
+  </select>
+
+  <label for="tag_id">Select a tag:</label>
+  <select id="tag_id" name="tag_id">
+    <option value="-1" disabled>--</option>
+    <% for tag in @tags %>
+      <option value="<%= tag.id %>"><%= tag.name %></option>
+    <% end %>
+  </select>
+
+  <input class="input-submit" type='submit' value="Filter Transactions"/>
+
+</form>

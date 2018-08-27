@@ -14,6 +14,28 @@ get "/transactions" do
   erb(:"transactions/index")
 end
 
+# INDEX - SORT
+get "/transactions/sort_time" do
+  @transactions = Transaction.sort_time
+  @total = Transaction.total
+  erb(:"transactions/index")
+end
+
+# INDEX - FILTER
+get "/transactions/filter" do
+  @tags = Tag.all
+  @merchants = Merchant.all
+  erb(:"transactions/filter")
+end
+
+# INDEX - FILTER
+get "/transactions/filtered" do
+  @transactions = Transaction.filter(params)
+  # @total = Transaction.total
+  # need to total just filtered - just do sum_by??
+  erb(:"transactions/index")
+end
+
 # NEW
 get '/transactions/new' do
   @tags = Tag.all
