@@ -1,11 +1,11 @@
 <h2>Transaction Id: <%= @transaction.id %></h2>
 
-<div><a href="/transactions/<%= @transaction.id %>">Transaction Id: <%= @transaction.id %></a>, Amount: <%= @transaction.amount %>, Merchant: <%= @transaction.merchant_id %>, Tag: <%= @transaction.tag_id %> </div>
-
-<form method="post" action="/transactions/<%= @transaction.id %>/delete">
-  <input type='submit' value="Delete Transaction"/>
-</form>
+<div><a href="/transactions/<%= @transaction.id %>">Transaction Id: <%= @transaction.id %></a>, Amount: <%= @transaction.amount %>, Description: <%= @transaction.description %>, Merchant: <%= @transaction.merchant.name %>, Tag: <%= @transaction.tag.name %> </div>
 
 <form method="get" action="/transactions/<%= @transaction.id %>/edit">
-  <input type='submit' value="Edit Transaction"/>
+  <input class="input-submit" type='submit' value="Edit Transaction"/>
+</form>
+
+<form method="post" action="/transactions/<%= @transaction.id %>/delete">
+  <input class="input-submit" type='submit' value="Delete Transaction"/>
 </form>

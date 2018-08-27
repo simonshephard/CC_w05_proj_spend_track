@@ -5,6 +5,9 @@
   <label for="amount">Amount:</label>
   <input id="amount" class="input-text" type="text" name="amount" value=<%= @transaction.amount %> />
 
+  <label for="description">Description:</label>
+  <input id="description" class="input-text" type="text" name="description" value=<%= @transaction.description %> />
+
   <label for="merchant_id">Select a merchant:</label>
   <select id="merchant_id" name="merchant_id">
     <% for merchant in @merchants %>

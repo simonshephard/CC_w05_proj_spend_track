@@ -15,8 +15,8 @@ ROUGH EXPECTED INITIAL TIMINGS
 DONE-Aim to get working MVP up and running asap
 DONE-THU - plan / scope / design / initial develop
 DONE-FRI - plan / scope / design / initial develop
--SAT - plan / initial present and PDA, develop
--SUN - scope / present / develop
+DONE-SAT - plan / initial present and PDA, develop
+DONE-SUN - scope / present / develop
 -MON - finish scope / design and develop
 -TUE - develop
 -WED - develop
@@ -35,68 +35,80 @@ DONE-set up project management file - might just do in this file
 DONE-consider presentation - prezzi - mac keynote
 DONE-consider trello - moscow board? - must/should/could/would(but not this time)
 DONE-consider trello - kanban board? - micro task management (to do, done etc)
-TODO-look at trello separately fof future if time - happy with current approach for now
+OK-WOULD-look at trello separately fof future if time - happy with current approach for now
+DONE-add notes from notepad!!
 
 GOALS
 DONE-get rough and then detailed plan
-TODO-consider all the possibilities for app
+DONE-consider all the possibilities for app
 DONE-aim to get prototype-MVP up and running asap
 DONE-aim to do presentation and PDA during process
-
-TODO-add notes from notepad!!
 
 
 2.SCOPE
 
 TO DO
--more detailed scoping - review apps
--personas in presentation
--user needs in presentation
--user journeys in presentation
--consider what other activity might be required
--split design goals by MVP/extensions/etc - must/should/could/would(but not this time)
+DONE-personas in presentation
+DONE-user needs in presentation
+DONE-user journeys in presentation
+OK-WOULD-more detailed scoping - review apps
+DONE-consider what other activity might be required
+DONE-split design goals by MVP/extensions/etc - must/should/could/would(but not this time)
 
 GOALS
--consider requirements and potential requirements
-TODO-detailed personas, user needs, user journeys
+DONE-consider requirements and potential requirements
+DONE-detailed personas, user needs, user journeys
 DONE-try to do directly in presentation??
 DONE-cover MVP
-TODO-EXTENSIONS-datetimestamp, sort by time, filter by XYZ, budget and alert
--consider further capability - review apps - Monzo, MoneyDashboard, lots of mobile/online banking apps
--identify must/should/could/not this time
+DONE-EXTENSIONS-datetimestamp, sort by time, filter by XYZ, budget and alert
+OK-WOULD-consider further capability - review apps - Monzo, MoneyDashboard, lots of mobile/online banking apps
+DONE-identify must/should/could/would(but not this time
+OK-WOULD-gamify budgetting/saving
 
 PERSONAS
-1.spending limit
-2.spending goal
-3.be in control - more information
--student needs to save, richer saving for something, XYZ something els
-uses phone - mobile first
-no controls on spending
-student - spending limited
-office worker - saving for something
-versus income - need to be able to add positive amounts!!
-repeat transactions??
+DONE1.spending limit
+DONE2.spending goal
+DONE3.be in control - more information
+DONE-student needs to save, richer saving for something, XYZ something els
+DONEuses phone - mobile first
+DONEno controls on spending
+DONEstudent - spending limited
+DONEoffice worker - saving for something
+DONEversus income - need to be able to add positive amounts!!
+DONErepeat transactions??
 
 USER NEEDS
--set limit
--set goal
--view details
+DONE-set limit
+DONE-set goal
+DONE-view details
 
 USER JOURNEYS
--as a:
--i want to be able to:
--so that I can:
+DONE-as a:
+DONE-i want to be able to:
+DONE-so that I can:
 
+MUST
+-MVP
+SHOULD
+-EXTENSIONS-datetimestamp, sort by time, filter by XYZ, budget and alert
+COULD
+-charts
+-better css - dropdown etc
+WOULD (BUT NOT THIS TIME)
+-more functionality
+-additional charts / analysis
+-gamify budgetting/saving
 
 3.DESIGN
 
 TO DO
 DONE-folder/file structure
-TODO-object diagrams
-OK-table diagrams
+OK-table psql diagrams - NOT REQUIRED - outline in this
 DONE-view wireframes??
 DONE-try to diagram directly in presentation??
 DONE-review folder/file structure for other objects
+TODO-object diagrams
+TODO-datetimestamp, sort by time, filter by XYZ, budget and alert
 
 FOLDER/FILE STRUCTURE
 DONE-controllers
@@ -119,7 +131,7 @@ DONE---index/new/show/edit for each other view
 
 OBJECTS
 
--MERCHANT OBJECT (MVP)
+MERCHANT OBJECT (MVP)
 Properties
 DONE---id
 DONE---name
@@ -130,7 +142,7 @@ DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
 ---get transactions/tags???
 ---self.delete(id)???
 
--TAG OBJECT (MVP)
+TAG OBJECT (MVP)
 Properties
 DONE---id
 DONE---name
@@ -141,7 +153,7 @@ DONE---CRUD (save, update, delete, self.all, self.delete_all, self.find(id))
 ---get transactions/merchants???
 ---self.delete(id)???
 
--TRANSACTION OBJECT (MVP)
+TRANSACTION OBJECT (MVP)
 Properties
 DONE---id
 DONE---amount
@@ -171,7 +183,7 @@ DONE---name
 DONE-transactions table (MVP)
 DONE---id
 DONE---amount
-TODO___name
+TODO---description
 TODO---date
 DONE---merchant_id
 DONE---tag_id
@@ -192,6 +204,7 @@ DONE-set up folder/file structure
 DONE-createdb spending_tracker
 DONE-psql -d spending_tracker -f db/spending_tracker.sql
 DONE-db sql-tables, runner for queries
+DONE-ruby db/seeds.rb
 DONE-amount to numeric
 DONE-objects/models
 DONE-seed file for testing
@@ -202,13 +215,13 @@ DONE-transactions_controller
 DONE-other controllers - app, tags, merchant
 DONE-basic CRUD views - index, new, show, edit
 DONE-additional methods required beyond CRUD - tags, merchants for transaction
-TODO-add date to transaction
+TODO-add date and description to transaction
 TODO-specs for testing
 TODO-review ALL re further extensions
 
 GOALS
 DONE-set up MVP asap
--identify and iteratively add functionality / styling
+OK-identify and iteratively add functionality / styling
 
 
 5.TEST

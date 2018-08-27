@@ -1,13 +1,35 @@
 
 
-SUNDAY 20180826
--4.Develop - css hidden radio dropdown for form
+MONDAY 20180827
+-1.Plan -
+-2.Scope -
+-3.Design -
+-4.Develop -
+-5.Present -
+-6.PDA -
 
 NOTES
--need to get dropdown below selected
--can i get selected to show on own separate and twice from selection in dropdown?
--would need to get value from selected somehow
+-back to xxx button on edit or save or cancel something
 -have default "--" or "other" tag and merchant that can be entered for new - need to make unable to delete
+-pretty price
+-grid or flex to align tables and inputs
+-transaction needs a name/description
+-need to do balance and targets
+-format amount in views - pretty_price??
+-do delete/find as class method??
+TODO-what are key things to add - what do I want app to do - where to focus
+TODO-EXTENSIONS-datetimestamp, sort by time, filter by XYZ, budget and alert
+TODO-improve CSS/HTML - table
+-remove on cascade delete - move transactions to default tag/merchant
+DONE-use tag/merchant method on transaction to get name
+
+SUNDAY 20180826
+-4.Develop - css hidden radio dropdown for form and do some additional styling, separate out styles
+
+NOTES
+DONE-need to get dropdown below selected
+OKNO-can i get selected to show on own separate and twice from selection in dropdown?
+OKNO-would need to get value from selected somehow
 
 SATURDAY 20180825
 -4.Develop - css hidden radio dropdown for form
@@ -31,14 +53,7 @@ DONE-broke when moved - think need app controller if move into folder!!
 DONE-add merchant and tag methods to transaction to use in views
 OK-remember to restart app when change to require statements
 DONE-UX pin website?? - 7day free trial only - although could change email used
--transaction needs a name/description
--need to do balance and targets
--format amount in views - pretty_price??
--do delete/find as class method??
-TODO-what are key things to add - what do I want app to do - where to focus
-TODO-HTML/CSS (navbar/buttons, header, branding, images??), charts
-TODO-EXTENSIONS-datetimestamp, sort by time, filter by XYZ, budget and alert
-
+DONE-HTML/CSS (navbar/buttons, header, branding, images??), charts
 
 THURSDAY 20180823
 -1.Plan - overview, detailed plan completed, set up git/github and completed hw form

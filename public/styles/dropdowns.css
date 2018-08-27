@@ -3,8 +3,6 @@
 .hidden-radio-dropdown {
   position: absolute;
   display: inline;
-  /* display: flex; */
-  /* flex-direction: column; */
 }
 /* hide the radio buttons */
 .hidden-radio-button {
@@ -46,7 +44,7 @@
   color: lightgrey;
 }
 /* styling when related hidden radio button selected */
-.hidden-radio-button:checked+label>.hidden-radio-div {
+.hidden-radio-button:checked+.hidden-radio-label>.hidden-radio-div {
   color: darkblue;
   background: grey;
 }
