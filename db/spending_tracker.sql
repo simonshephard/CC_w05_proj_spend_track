@@ -22,7 +22,7 @@ CREATE TABLE merchants (
 CREATE TABLE transactions (
   id SERIAL8 PRIMARY KEY,
   date_time VARCHAR(255),
-  amount NUMERIC(10,2) NOT NULL,
+  amount DECIMAL(13,4) NOT NULL,
   description VARCHAR(255) NOT NULL,
   merchant_id INT8 REFERENCES merchants(id) ON DELETE CASCADE,
   tag_id INT8 REFERENCES tags(id) ON DELETE CASCADE
