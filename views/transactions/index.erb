@@ -2,12 +2,26 @@
 
 <div class="transactions-table">
 
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
   <div class="table-head">Transaction Id</div>
   <div class="table-head">Date-time</div>
   <div class="table-head">Amount</div>
   <div class="table-head">Description</div>
   <div class="table-head">Merchant</div>
   <div class="table-head">Tag</div>
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
 
 <% @transactions.each do |transaction| %>
 
@@ -19,6 +33,13 @@
   <div class="table-box"><%= transaction.tag.name %></div>
 
 <% end %>
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
 
   <div class="table-total">Total</div>
   <div class="table-total"></div>

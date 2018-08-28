@@ -4,8 +4,11 @@
 
 <div class="two-col-table">
 
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
   <div class="table-head"><label for="date_time">Date-time:</label></div>
-  <div class="table-box"><input id="date_time" type="datetime-local" name="date_time" value=<%= @transaction.date_time %> /></div>
+  <div class="table-box"><input id="date_time" class="input-date-time" type="datetime-local" name="date_time" value=<%= @transaction.date_time %> /></div>
 
   <div class="table-head"><label for="amount">Amount:</label></div>
   <div class="table-box"><input id="amount" class="input-text" type="text" name="amount" value=<%= Transaction.money_amount(@transaction.amount) %> /></div>
@@ -32,6 +35,9 @@
       <option selected="selected" value="<%= @transaction.tag.id %>" ><%= @transaction.tag.name %></option>
     </select>
   </div>
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
 
   <div class="table-box"></div>
   <div class="table-box"></div>

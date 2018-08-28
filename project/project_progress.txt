@@ -4,7 +4,7 @@ TUESDAY 20180828
 -1.Plan -
 -2.Scope -
 -3.Design - use DECIMAL(13,4), warning limit
--4.Develop - update to DECIMAL(13,4), price format and view, grid view for tag/merchant/budget index/show/new/edit/filter, format date_time, styling date_time, default now, warning limit
+-4.Develop - update to DECIMAL(13,4), price format and view, grid view for tag/merchant/budget index/show/new/edit/filter, format date_time, styling date_time, default now, warning limit, better spacing
 -5.Present - class and object diagrams
 -6.PDA - class and object diagrams
 

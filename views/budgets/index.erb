@@ -2,9 +2,17 @@
 
 <div class="three-col-table">
 
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
   <div class="table-head">Budget Id</div>
   <div class="table-head">Amount</div>
   <div class="table-head">Warning</div>
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
 
 <% @budgets.each do |budget| %>
 
@@ -14,21 +22,21 @@
 
 <% end %>
 
-<div class="table-box"></div>
-<div class="table-box"></div>
-<div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
 
-<div class="table-head">Budget</div>
-<div class="table-head"><%= Budget.money_amount(@budgets[0].amount) %></div>
-<div class="table-box"></div>
+  <div class="table-head">Budget</div>
+  <div class="table-head"><%= Budget.money_amount(@budgets[0].amount) %></div>
+  <div class="table-box"></div>
 
-<div class="table-head">Transaction Total</div>
-<div class="table-head"><%= Budget.money_amount(@total) %></div>
-<div class="table-box"></div>
+  <div class="table-head">Transaction Total</div>
+  <div class="table-head"><%= Budget.money_amount(@total) %></div>
+  <div class="table-box"></div>
 
-<div class="table-head">Capacity</div>
-<div class="table-head"><%=  @budgets[0].capacity %></div>
-<div class="table-box"></div>
+  <div class="table-head">Capacity</div>
+  <div class="table-head"><%=  @budgets[0].capacity %></div>
+  <div class="table-box"></div>
 
 <% if @total.to_f > @budgets[0].warning.to_f %>
 
