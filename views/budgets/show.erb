@@ -8,6 +8,9 @@
   <div class="table-box"><a href="/budgets/<%= @budget.id %>"><%= @budget.id %></a></div>
   <div class="table-box"><%= Budget.money_amount(@budget.amount) %></div>
 
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
   <div class="table-box">
     <form method="get" action="/budgets/<%= @budget.id %>/edit">
       <input class="input-submit" type='submit' value="Edit Budget"/>
