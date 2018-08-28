@@ -4,16 +4,17 @@ TUESDAY 20180828
 -1.Plan -
 -2.Scope -
 -3.Design - use DECIMAL(13,4)
--4.Develop - update to DECIMAL(13,4)
+-4.Develop - update to DECIMAL(13,4), price format and view
 -5.Present -
 -6.PDA -
 
 NOTES
-TODO-1.improve CSS/HTML - better grid
+DONE-format amount in views - pretty_price??
+TODO-1.improve CSS/HTML - better grid - and extend
 TODO-2.charts/analysis
 TODO-3.object diagrams
-TODO-4.format amount in views - pretty_price??
 TODO-5.format date-time in views
+-refactor money formatting - make more consistent - and consistent store as integer and recover??
 -on delete tags - instead of removing ON DELETE CASCADE - check sure and list all the transactions it will delete - use filter
 -back to xxx button on edit or save or cancel something
 -have default "--" or "other" tag and merchant that can be entered for new - need to make unable to delete

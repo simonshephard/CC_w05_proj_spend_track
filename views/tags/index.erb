@@ -1,5 +1,15 @@
 <h2>Tags</h2>
 
+<div class="merchants-table">
+
+  <div class="table-head">Tag Id</div>
+  <div class="table-head">Name</div>
+
 <% @tags.each do |tag| %>
-<div><a href="/tags/<%= tag.id %>">Tag Id: <%= tag.id %></a>, Name: <%= tag.name %> </div>
+
+  <div class="table-box"><a href="/tags/<%= tag.id %>"><%= tag.id %></a></div>
+  <div class="table-box"><%= tag.name %></div>
+
 <% end %>
+
+</div>

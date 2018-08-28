@@ -1,5 +1,15 @@
 <h2>Merchants</h2>
 
+<div class="merchants-table">
+
+  <div class="table-head">Merchant Id</div>
+  <div class="table-head">Name</div>
+
 <% @merchants.each do |merchant| %>
-<div><a href="/merchants/<%= merchant.id %>">Merchant Id: <%= merchant.id %></a>, Name: <%= merchant.name %> </div>
+
+  <div class="table-box"><a href="/merchants/<%= merchant.id %>"><%= merchant.id %></a></div>
+  <div class="table-box"><%= merchant.name %></div>
+
 <% end %>
+
+</div>
