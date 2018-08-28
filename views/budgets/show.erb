@@ -1,6 +1,6 @@
 <h2>Budget Id: <%= @budget.id %></h2>
 
-<div><a href="/budgets/<%= @budget.id %>">Budget Id: <%= @budget.id %></a>, Amount: <%= @budget.amount %> </div>
+<div><a href="/budgets/<%= @budget.id %>">Budget Id: <%= @budget.id %></a>, Amount: <%= Budget.money_amount(@budget.amount) %> </div>
 
 <form method="get" action="/budgets/<%= @budget.id %>/edit">
   <input class="input-submit" type='submit' value="Edit Budget"/>

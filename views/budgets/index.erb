@@ -1,9 +1,9 @@
 <h2>Budgets</h2>
 
 <% @budgets.each do |budget| %>
-  <div><a href="/budgets/<%= budget.id %>">Budget Id: <%= budget.id %></a>, Amount: <%= budget.amount %> </div>
+  <div><a href="/budgets/<%= budget.id %>">Budget Id: <%= budget.id %></a>, Amount: <%= Budget.money_amount(budget.amount) %> </div>
 <% end %>
 
-<h2>Transaction Total: <%= @total %></h2>
-<h2>Budget: <%= @budgets[0].amount %></h2>
-<h2>Capacity v Budget: <%=  @budgets[0].amount - @total %></h2>
+<h2>Transaction Total: <%= Budget.money_amount(@total) %></h2>
+<h2>Budget: <%= Budget.money_amount(@budgets[0].amount) %></h2>
+<h2>Capacity v Budget: <%=  @budgets[0].capacity %></h2>

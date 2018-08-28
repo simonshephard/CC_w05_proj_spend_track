@@ -7,7 +7,7 @@ class Transaction
   def initialize(options)
     @id = options["id"].to_i
     @date_time = options["date_time"]
-    @amount = options["amount"].to_f
+    @amount = options["amount"]
     @description = options["description"]
     @merchant_id = options["merchant_id"].to_i
     @tag_id = options["tag_id"].to_i
@@ -76,7 +76,8 @@ class Transaction
   end
 
   def self.total(transactions)
-    transactions.sum {|transaction| transaction.amount}
+    total = transactions.sum {|transaction| transaction.amount.to_f}
+    total.to_s
   end
 
   def merchant
@@ -94,5 +95,10 @@ class Transaction
     data = SqlRunner.run(sql, values)
     Tag.new(data.first)
   end
+
+  def self.money_amount(amount_str)
+    sprintf("%#.2f", amount_str)
+  end
+
 
 end

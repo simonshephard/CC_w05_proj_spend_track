@@ -98,6 +98,8 @@ COULD
 WOULD (BUT NOT THIS TIME)
 -additional charts / analysis
 -gamify budgetting/saving
+-different currencies
+
 
 3.DESIGN
 
@@ -191,7 +193,7 @@ DONE---name
 
 DONE-transactions table (MVP)
 DONE---id
-DONE---amount
+DONE---amount - DECIMAL(13,4) apparently best for GAAP
 DONE---description
 DONE---date
 DONE---merchant_id

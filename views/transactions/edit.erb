@@ -6,7 +6,7 @@
   <input id="date_time" type="datetime-local" name="date_time" value=<%= @transaction.date_time %> />
 
   <label for="amount">Amount:</label>
-  <input id="amount" class="input-text" type="text" name="amount" value=<%= @transaction.amount %> />
+  <input id="amount" class="input-text" type="text" name="amount" value=<%= Transaction.money_amount(@transaction.amount) %> />
 
   <label for="description">Description:</label>
   <input id="description" class="input-text" type="text" name="description" value=<%= @transaction.description %> />
