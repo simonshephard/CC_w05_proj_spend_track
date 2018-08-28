@@ -97,7 +97,7 @@ COULD
 -validation - restrict entry types
 WOULD (BUT NOT THIS TIME)
 -additional charts / analysis
--gamify budgetting/saving
+-gamify budgeting/saving
 -different currencies
 
 

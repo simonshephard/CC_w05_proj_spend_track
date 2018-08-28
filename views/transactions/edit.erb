@@ -2,31 +2,40 @@
 
 <form method="post" action="/transactions/<%= @transaction.id %>">
 
-  <label for="date_time">Date-time:</label>
-  <input id="date_time" type="datetime-local" name="date_time" value=<%= @transaction.date_time %> />
+<div class="two-col-table">
 
-  <label for="amount">Amount:</label>
-  <input id="amount" class="input-text" type="text" name="amount" value=<%= Transaction.money_amount(@transaction.amount) %> />
+  <div class="table-head"><label for="date_time">Date-time:</label></div>
+  <div class="table-box"><input id="date_time" type="datetime-local" name="date_time" value=<%= @transaction.date_time %> /></div>
 
-  <label for="description">Description:</label>
-  <input id="description" class="input-text" type="text" name="description" value=<%= @transaction.description %> />
+  <div class="table-head"><label for="amount">Amount:</label></div>
+  <div class="table-box"><input id="amount" class="input-text" type="text" name="amount" value=<%= Transaction.money_amount(@transaction.amount) %> /></div>
 
-  <label for="merchant_id">Select a merchant:</label>
-  <select id="merchant_id" name="merchant_id">
-    <% for merchant in @merchants %>
-      <option value="<%= merchant.id %>"><%= merchant.name %></option>
-    <% end %>
-    <option selected="selected" value="<%= @transaction.merchant.id %>" > <%= @transaction.merchant.name %></option>
-  </select>
+  <div class="table-head"><label for="description">Description:</label></div>
+  <div class="table-box"><input id="description" class="input-text" type="text" name="description" value=<%= @transaction.description %> /></div>
 
-  <label for="tag_id">Select a tag:</label>
-  <select id="tag_id" name="tag_id">
-    <% for tag in @tags %>
-      <option value="<%= tag.id %>"><%= tag.name %></option>
-    <% end %>
-    <option selected="selected" value="<%= @transaction.tag.id %>" ><%= @transaction.tag.name %></option>
-  </select>
+  <div class="table-head"><label for="merchant_id">Select a merchant:</label></div>
+  <div class="table-box">
+    <select id="merchant_id" name="merchant_id">
+      <% for merchant in @merchants %>
+        <option value="<%= merchant.id %>"><%= merchant.name %></option>
+      <% end %>
+      <option selected="selected" value="<%= @transaction.merchant.id %>" > <%= @transaction.merchant.name %></option>
+    </select>
+  </div>
 
-  <input class="input-submit" type='submit' value="Edit Transaction"/>
+  <div class="table-head"><label for="tag_id">Select a tag:</label></div>
+  <div class="table-box">
+    <select id="tag_id" name="tag_id">
+      <% for tag in @tags %>
+        <option value="<%= tag.id %>"><%= tag.name %></option>
+      <% end %>
+      <option selected="selected" value="<%= @transaction.tag.id %>" ><%= @transaction.tag.name %></option>
+    </select>
+  </div>
+
+  <div class="table-head"></div>
+  <div class="table-box"><input class="input-submit" type='submit' value="Edit Transaction"/></div>
+
+</div>
 
 </form>

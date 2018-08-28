@@ -4,7 +4,7 @@ TUESDAY 20180828
 -1.Plan -
 -2.Scope -
 -3.Design - use DECIMAL(13,4)
--4.Develop - update to DECIMAL(13,4), price format and view, grid view for tag/merchant index
+-4.Develop - update to DECIMAL(13,4), price format and view, grid view for tag/merchant/budget index/show/new/edit
 -5.Present -
 -6.PDA -
 

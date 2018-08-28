@@ -2,9 +2,14 @@
 
 <form method="post" action="/merchants/<%= @merchant.id %>">
 
-  <label for="name">Name:</label>
-  <input id="name" class="input-text" type="text" name="name" value=<%= @merchant.name %> />
+<div class="two-col-table">
 
-  <input class="input-submit" type='submit' value="Edit Merchant"/>
+  <div class="table-head"><label for="name">Name:</label></div>
+  <div class="table-box"><input id="name" class="input-text" type="text" name="name" value=<%= @merchant.name %> /></div>
+
+  <div class="table-head"></div>
+  <div class="table-box"><input class="input-submit" type='submit' value="Edit Merchant"/></div>
+
+</div>
 
 </form>
