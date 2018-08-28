@@ -7,33 +7,43 @@
   <div class="table-box"></div>
   <div class="table-box"></div>
 
-  <div class="table-head"><label for="date_time">Date-time:</label></div>
+  <div class="table-head"><label for="date_time">Date-time</label></div>
   <div class="table-box"><input id="date_time" class="input-date-time" type="datetime-local" name="date_time" value=<%= @transaction.date_time %> /></div>
 
-  <div class="table-head"><label for="amount">Amount:</label></div>
+  <div class="table-head"><label for="amount">Amount</label></div>
   <div class="table-box"><input id="amount" class="input-text" type="text" name="amount" value=<%= Transaction.money_amount(@transaction.amount) %> /></div>
 
-  <div class="table-head"><label for="description">Description:</label></div>
+  <div class="table-head"><label for="description">Description</label></div>
   <div class="table-box"><input id="description" class="input-text" type="text" name="description" value=<%= @transaction.description %> /></div>
 
-  <div class="table-head"><label for="merchant_id">Select a merchant:</label></div>
+  <div class="table-head"><label>Select a merchant</label></div>
   <div class="table-box">
-    <select id="merchant_id" name="merchant_id">
+    <div class="hidden-radio-dropdown">
       <% for merchant in @merchants %>
-        <option value="<%= merchant.id %>"><%= merchant.name %></option>
+        <% if merchant.id == @transaction.merchant.id %>
+          <input type="radio" id="merchant<%= merchant.id %>" value="<%= merchant.id %>" class="hidden-radio-button" name="merchant_id" checked="checked">
+          <% first_item = false %>
+        <% else %>
+          <input type="radio" id="merchant<%= merchant.id %>" value="<%= merchant.id %>" class="hidden-radio-button" name="merchant_id">
+        <% end %>
+        <label for="merchant<%= merchant.id %>" class="hidden-radio-label"><div class="hidden-radio-div"><%= merchant.name %></div></label>
       <% end %>
-      <option selected="selected" value="<%= @transaction.merchant.id %>" > <%= @transaction.merchant.name %></option>
-    </select>
+    </div>
   </div>
 
-  <div class="table-head"><label for="tag_id">Select a tag:</label></div>
+  <div class="table-head"><label>Select a tag</label></div>
   <div class="table-box">
-    <select id="tag_id" name="tag_id">
+    <div class="hidden-radio-dropdown">
       <% for tag in @tags %>
-        <option value="<%= tag.id %>"><%= tag.name %></option>
+        <% if tag.id == @transaction.tag.id %>
+          <input type="radio" id="tag<%= tag.id %>" value="<%= tag.id %>" class="hidden-radio-button" name="tag_id" checked="checked">
+          <% first_item = false %>
+        <% else %>
+          <input type="radio" id="tag<%= tag.id %>" value="<%= tag.id %>" class="hidden-radio-button" name="tag_id">
+        <% end %>
+        <label for="tag<%= tag.id %>" class="hidden-radio-label"><div class="hidden-radio-div"><%= tag.name %></div></label>
       <% end %>
-      <option selected="selected" value="<%= @transaction.tag.id %>" ><%= @transaction.tag.name %></option>
-    </select>
+    </div>
   </div>
 
   <div class="table-box"></div>

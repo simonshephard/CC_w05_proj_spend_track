@@ -1,8 +1,48 @@
+.input-submit {
+  margin: 0;
+  background: grey;
+  display: inline;
+  height: 30px;
+  width: 200px;
+  padding: 0px;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+.input-text {
+  margin: 0;
+  padding-left: 2px;
+  background: lightgrey;
+  display: inline;
+  height: 30px;
+  width: 200px;
+  padding: 0px;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+.input-date-time {
+  margin: 0;
+  padding-left: 2px;
+  background: lightgrey;
+  display: inline;
+  height: 30px;
+  width: 200px;
+  padding: 0px;
+  border: 1px solid black;
+  font-size: 16px;
+}
 
 /* container */
 .hidden-radio-dropdown {
   position: absolute;
   display: inline;
+  height: 30px;
+  width: 200px;
+  padding: 0px;
+  background: lightgrey;
+  border: 1px solid black;
+  font-size: 16px;
 }
 /* hide the radio buttons */
 .hidden-radio-button {
@@ -28,10 +68,14 @@
 /* use inner div for better styling */
 .hidden-radio-div {
   height: 30px;
-  width: 150px;
+  width: 200px;
+  padding: 0px;
+  background: lightgrey;
+  border: 1px solid black;
   line-height: 30px; /* equal to height */
   text-align: center;
   vertical-align: middle;
+  font-size: 16px;
   font-weight: 400;
   background: lightgrey;
   color: grey;
