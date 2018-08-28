@@ -1,11 +1,22 @@
 <h2>Merchant Id: <%= @merchant.id %></h2>
 
-<div><a href="/merchants/<%= @merchant.id %>">Merchant Id: <%= @merchant.id %></a>, Name: <%= @merchant.name %> </div>
+<div class="merchants-table">
 
-<form method="get" action="/merchants/<%= @merchant.id %>/edit">
-  <input class="input-submit" type='submit' value="Edit Merchant"/>
-</form>
+  <div class="table-head">Merchant Id</div>
+  <div class="table-head">Name</div>
 
-<form method="post" action="/merchants/<%= @merchant.id %>/delete">
-  <input class="input-submit" type='submit' value="Delete Merchant"/>
-</form>
+  <div class="table-box"><a href="/merchants/<%= @merchant.id %>"><%= @merchant.id %></a></div>
+  <div class="table-box"><%= @merchant.name %></div>
+
+  <div class="table-box">
+    <form method="get" action="/merchants/<%= @merchant.id %>/edit">
+      <input class="input-submit" type='submit' value="Edit Merchant"/>
+    </form>
+  </div>
+  <div class="table-box">
+    <form method="post" action="/merchants/<%= @merchant.id %>/delete">
+      <input class="input-submit" type='submit' value="Delete Merchant"/>
+    </form>
+  </div>
+
+</div>

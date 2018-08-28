@@ -1,11 +1,23 @@
 <h2>Tag Id: <%= @tag.id %></h2>
 
-<div><a href="/tags/<%= @tag.id %>">Tag Id: <%= @tag.id %></a>, Name: <%= @tag.name %> </div>
+<div class="merchants-table">
 
-<form method="get" action="/tags/<%= @tag.id %>/edit">
-  <input class="input-submit" type='submit' value="Edit Tag"/>
-</form>
+  <div class="table-head">Tag Id</div>
+  <div class="table-head">Name</div>
 
-<form method="post" action="/tags/<%= @tag.id %>/delete">
-  <input class="input-submit" type='submit' value="Delete Tag"/>
-</form>
+  <div class="table-box"><a href="/tags/<%= @tag.id %>"><%= @tag.id %></a></div>
+  <div class="table-box"><%= @tag.name %></div>
+
+  <div class="table-box">
+    <form method="get" action="/tags/<%= @tag.id %>/edit">
+      <input class="input-submit" type='submit' value="Edit Tag"/>
+    </form>
+  </div>
+  <div class="table-box">
+    <form method="post" action="/tags/<%= @tag.id %>/delete">
+      <input class="input-submit" type='submit' value="Delete Tag"/>
+    </form>
+  </div>
+
+
+</div>

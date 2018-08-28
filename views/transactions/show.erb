@@ -1,6 +1,6 @@
 <h2>Transaction Id: <%= @transaction.id %></h2>
 
-<div class="container-table">
+<div class="transactions-table">
 
   <div class="table-head">Transaction Id</div>
   <div class="table-head">Date-time</div>
@@ -16,19 +16,19 @@
   <div class="table-box"><%= @transaction.merchant.name %></div>
   <div class="table-box"><%= @transaction.tag.name %></div>
 
-  <div class="table-total">
+  <div class="table-box">
     <form method="get" action="/transactions/<%= @transaction.id %>/edit">
       <input class="input-submit" type='submit' value="Edit Transaction"/>
     </form>
   </div>
-  <div class="table-total">
+  <div class="table-box">
     <form method="post" action="/transactions/<%= @transaction.id %>/delete">
       <input class="input-submit" type='submit' value="Delete Transaction"/>
     </form>
   </div>
-  <div class="table-total"></div>
-  <div class="table-total"></div>
-  <div class="table-total"></div>
-  <div class="table-total"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
 
 </div>
