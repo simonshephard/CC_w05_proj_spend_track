@@ -10,7 +10,7 @@
   <div class="table-head">Tag</div>
 
   <div class="table-box"><a href="/transactions/<%= @transaction.id %>"><%= @transaction.id %></a></div>
-  <div class="table-box"><%= @transaction.date_time %></div>
+  <div class="table-box"><%= @transaction.date_time_format %></div>
   <div class="table-box"><%= Transaction.money_amount(@transaction.amount) %></div>
   <div class="table-box"><%= @transaction.description %></div>
   <div class="table-box"><%= @transaction.merchant.name %></div>

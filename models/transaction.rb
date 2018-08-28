@@ -100,5 +100,9 @@ class Transaction
     sprintf("%#.2f", amount_str)
   end
 
+  def date_time_format
+    date_time[0,10] + " " + date_time[11,5]
+  end
+
 
 end

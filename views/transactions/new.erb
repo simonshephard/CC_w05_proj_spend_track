@@ -5,10 +5,10 @@
 <div class="two-col-table">
 
   <div class="table-head"><label for="date_time">Date-time:</label></div>
-  <div class="table-box"><input id="date_time" type="datetime-local" name="date_time" value="2018-01-01T12:00" /></div>
+  <div class="table-box"><input id="date_time" class="input-date-time" type="datetime-local" name="date_time" value="<%= DateTime.now.to_s[0,16] %>" /></div>
 
   <div class="table-head"><label for="amount">Amount:</label></div>
-  <div class="table-box"><input id="amount" class="input-text" type="text" name="amount" /></div>
+  <div class="table-box"><input id="amount" class="input-text" type="text" name="amount" value="0.00" /></div>
 
   <div class="table-head"><label for="description">Description:</label></div>
   <div class="table-box"><input id="description" class="input-text" type="text" name="description" /></div>

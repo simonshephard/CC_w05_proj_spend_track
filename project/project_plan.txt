@@ -99,6 +99,7 @@ WOULD (BUT NOT THIS TIME)
 -additional charts / analysis
 -gamify budgeting/saving
 -different currencies
+-timeformats and consistent saving
 
 
 3.DESIGN
@@ -231,8 +232,8 @@ DONE-other controllers - app, tags, merchant
 DONE-basic CRUD views - index, new, show, edit
 DONE-additional methods required beyond CRUD - tags, merchants for transaction
 DONE-add date and description to transaction
+OK-review ALL re further extensions
 TODO-specs for testing
-TODO-review ALL re further extensions
 
 GOALS
 DONE-set up MVP asap
