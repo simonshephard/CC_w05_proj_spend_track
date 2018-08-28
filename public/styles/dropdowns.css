@@ -11,21 +11,25 @@
 /* hide the header labels as standard... */
 .hidden-radio-label {
   display: none;
+  z-index: 0;
 }
 /* ... but show when related hidden radio button selected ... */
 .hidden-radio-button:checked+.hidden-radio-label {
   display: block;
+  z-index: 0;
 }
 /* ... and show all on hover  */
 .hidden-radio-dropdown:hover .hidden-radio-label {
   display: block;
+  position: relative;
   z-index: 1;
+  overflow: visible;
 }
 /* use inner div for better styling */
 .hidden-radio-div {
-  height: 26px;
+  height: 30px;
   width: 150px;
-  line-height: 26px; /* equal to height */
+  line-height: 30px; /* equal to height */
   text-align: center;
   vertical-align: middle;
   font-weight: 400;

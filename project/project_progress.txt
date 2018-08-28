@@ -14,6 +14,7 @@ TODO-1.improve CSS/HTML - better grid - and extend
 TODO-2.charts/analysis
 TODO-3.object diagrams
 TODO-5.format date-time in views
+-money format - right align and add comma formats
 -refactor money formatting - make more consistent - and consistent store as integer and recover??
 -on delete tags - instead of removing ON DELETE CASCADE - check sure and list all the transactions it will delete - use filter
 -back to xxx button on edit or save or cancel something

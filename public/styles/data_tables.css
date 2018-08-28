@@ -5,7 +5,7 @@
   grid-auto-rows: minmax(30px, auto);
 }
 
-.merchants-table {
+.two-col-table {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
