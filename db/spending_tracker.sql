@@ -6,7 +6,8 @@ DROP TABLE budgets;
 
 CREATE TABLE budgets (
   id SERIAL8 PRIMARY KEY,
-  amount DECIMAL(13,4) NOT NULL
+  amount DECIMAL(13,4) NOT NULL,
+  warning DECIMAL(13,4) NOT NULL
 );
 
 CREATE TABLE tags (

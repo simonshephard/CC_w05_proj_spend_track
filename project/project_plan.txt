@@ -111,7 +111,7 @@ DONE-view wireframes??
 DONE-try to diagram directly in presentation??
 DONE-review folder/file structure for other objects
 DONE-datetimestamp, sort by time, filter by XYZ, budget and alert
-TODO-object diagrams
+DONE-object diagrams
 
 FOLDER/FILE STRUCTURE
 DONE-controllers
@@ -160,6 +160,7 @@ BUDGET OBJECT
 Properties
 DONE---id
 DONE---amount
+DONE---warning
 Methods
 DONE---initialize
 DONE---reader(amount,id)
@@ -279,8 +280,8 @@ DONE-check requirements
 
 REQUIREMENTS FOR PDA - WEEK 5 AND 6
 DONE-A Use Case Diagram
-TODO-A Class Diagram
-TODO-An Object Diagram
+DONE-A Class Diagram
+DONE-An Object Diagram
 DONE-An Activity Diagram
 DONE-Produce an Implementations Constraints plan detailing the following factors:
 DONE---Hardware and software platforms

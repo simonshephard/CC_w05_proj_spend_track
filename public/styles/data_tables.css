@@ -12,10 +12,22 @@
   grid-auto-rows: minmax(30px, auto);
 }
 
+.three-col-table {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-auto-rows: minmax(30px, auto);
+}
+
 .table-head {
   font-weight: 700;
 }
 
 .table-total {
   font-weight: 700;
+}
+
+.table-warning {
+  font-weight: 700;
+  color: red;
 }

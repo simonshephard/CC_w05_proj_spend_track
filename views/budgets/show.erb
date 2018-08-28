@@ -1,13 +1,16 @@
 <h2>Budget Id: <%= @budget.id %></h2>
 
-<div class="two-col-table">
+<div class="three-col-table">
 
   <div class="table-head">Budget Id</div>
   <div class="table-head">Amount</div>
+  <div class="table-head">Warning</div>
 
   <div class="table-box"><a href="/budgets/<%= @budget.id %>"><%= @budget.id %></a></div>
   <div class="table-box"><%= Budget.money_amount(@budget.amount) %></div>
+  <div class="table-box"><%= Budget.money_amount(@budget.warning) %></div>
 
+  <div class="table-box"></div>
   <div class="table-box"></div>
   <div class="table-box"></div>
 
@@ -21,5 +24,6 @@
       <input class="input-submit" type='submit' value="Delete Budget"/>
     </form>
   </div>
+  <div class="table-box"></div>
 
 </div>

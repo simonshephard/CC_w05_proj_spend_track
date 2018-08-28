@@ -3,20 +3,21 @@ require_relative("./transaction")
 
 class Budget
 
-  attr_reader :id, :amount
+  attr_reader :id, :amount, :warning
 
   def initialize(options)
     @id = options["id"].to_i
     @amount = options["amount"]
+    @warning = options["warning"]
   end
 
   def save
     sql = "INSERT INTO budgets
-    (amount)
+    (amount, warning)
     VALUES
-    ($1)
+    ($1, $2)
     RETURNING *"
-    values = [@amount]
+    values = [@amount, @warning]
     data = SqlRunner.run(sql, values)
     @id = data.first["id"].to_i
   end
@@ -24,9 +25,10 @@ class Budget
   def update
     sql = "UPDATE budgets
     SET
-    amount = $1
-    WHERE id = $2"
-    values = [@amount, @id]
+    (amount, warning)
+    = ($1, $2)
+    WHERE id = $3"
+    values = [@amount, @warning, @id]
     SqlRunner.run(sql, values)
   end
 
