@@ -25,6 +25,11 @@
   color: white;
 }
 
+.header-link {
+  text-decoration: none;
+  color: white;
+}
+
 #nav-bar {
   background: lightgrey;
   color: black;
@@ -35,33 +40,4 @@
   padding-left: 20px;
   background: white;
   color: darkblue;
-}
-
-select, option {
-  -webkit-appearance: none; /* WebKit/Chromium */
-  -moz-appearance: none; /* Gecko */
-}
-select::-ms-expand {
-  display: none;
-}
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  height: 26px;
-  width: 200px;
-  padding: 5px;
-  border: 1px solid grey;
-  /* text-transform: uppercase; */
-  background: lightgrey;
-  color: black;
-  font-size: 14px;
-}
-option {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
