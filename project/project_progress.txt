@@ -4,17 +4,17 @@ TUESDAY 20180828
 -1.Plan -
 -2.Scope -
 -3.Design - use DECIMAL(13,4)
--4.Develop - update to DECIMAL(13,4), price format and view, grid view for tag/merchant/budget index/show/new/edit/filter
+-4.Develop - update to DECIMAL(13,4), price format and view, grid view for tag/merchant/budget index/show/new/edit/filter, format date_time, styling date_time, default now
 -5.Present -
 -6.PDA -
 
 NOTES
 DONE-format amount in views - pretty_price??
 DONE-better grid - and extend
+DONE-format date-time in views
 TODO-1.object diagrams
-TODO-2.format date-time in views
-TODO-3.improve CSS/HTML
-TODO-4.charts/analysis
+TODO-2.improve CSS/HTML
+TODO-3.charts/analysis
 -money format - right align and add comma formats
 -refactor money formatting - make more consistent - and consistent store as integer and recover??
 -on delete tags - instead of removing ON DELETE CASCADE - check sure and list all the transactions it will delete - use filter
