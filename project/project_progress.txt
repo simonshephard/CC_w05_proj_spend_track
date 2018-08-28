@@ -16,9 +16,7 @@ DONE-object diagrams
 TODO-1.improve CSS/HTML
 TODO-2.charts/analysis
 TODO-3.money format - right align and add comma formats
--update wireframe2
--update sitemap
--do, review and update presentation
+TODO-4.do, review and update presentation - update wireframe2 - update sitemap
 -refactor money formatting - make more consistent - and consistent store as integer and recover??
 -on delete tags - instead of removing ON DELETE CASCADE - check sure and list all the transactions it will delete - use filter
 -back to xxx button on edit or save or cancel something

@@ -1,33 +1,59 @@
 .transactions-table {
   display: grid;
-  width: 100%;
-  grid-template-columns: repeat(6, minmax(100px, 1fr));
+  /* width: 100%; */
+  grid-template-columns: repeat(6, minmax(min-content, max-content));
   grid-auto-rows: minmax(30px, auto);
 }
 
 .two-col-table {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
   grid-auto-rows: minmax(30px, auto);
 }
 
 .three-col-table {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-columns: repeat(3, minmax(min-content, max-content));
   grid-auto-rows: minmax(30px, auto);
 }
 
 .table-head {
-  font-weight: 700;
+  padding: 0 15px;
+  font-weight: 600;
+  align-self: center;
+}
+
+.table-box {
+  padding: 0px 15px;
+  font-weight: 200;
+  align-self: center;
+}
+
+.table-box-contain {
+  padding: 0px 15px;
+  font-weight: 200;
+  /* align-self: center; */
 }
 
 .table-total {
-  font-weight: 700;
+  padding: 0 15px;
+  font-weight: 600;
+  align-self: center;
 }
 
 .table-warning {
-  font-weight: 700;
+  padding: 0 15px;
+  font-weight: 600;
   color: red;
+  align-self: center;
+}
+
+.la {
+  justify-self: start;
+}
+
+.ra {
+  justify-self: end;
 }

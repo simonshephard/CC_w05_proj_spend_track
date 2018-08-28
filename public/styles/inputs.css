@@ -1,36 +1,32 @@
 .input-submit {
-  margin: 0;
-  background: grey;
-  display: inline;
-  height: 30px;
   width: 200px;
-  padding: 0px;
+  padding: 6px;
   border: 1px solid black;
   font-size: 16px;
+  font-weight: 200;
+  background: grey;
+}
+.input-submit:hover {
+  cursor: pointer;
 }
 
 .input-text {
-  margin: 0;
-  padding-left: 2px;
-  background: lightgrey;
-  display: inline;
-  height: 30px;
   width: 200px;
-  padding: 0px;
+  padding: 7px;
   border: 1px solid black;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 200;
+  background: lightgrey;
 }
 
 .input-date-time {
-  margin: 0;
-  padding-left: 2px;
-  background: lightgrey;
-  display: inline;
-  height: 30px;
   width: 200px;
-  padding: 0px;
+  padding: 5px;
+  /* adds extra 2px I think */
   border: 1px solid black;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 200;
+  background: lightgrey;
 }
 
 /* container */
@@ -39,10 +35,8 @@
   display: inline;
   height: 30px;
   width: 200px;
-  padding: 0px;
   background: lightgrey;
   border: 1px solid black;
-  font-size: 16px;
 }
 /* hide the radio buttons */
 .hidden-radio-button {
@@ -57,6 +51,7 @@
 .hidden-radio-button:checked+.hidden-radio-label {
   display: block;
   z-index: 0;
+  color: black;
 }
 /* ... and show all on hover  */
 .hidden-radio-dropdown:hover .hidden-radio-label {
@@ -64,21 +59,20 @@
   position: relative;
   z-index: 1;
   overflow: visible;
+  color: grey;
 }
 /* use inner div for better styling */
 .hidden-radio-div {
-  height: 30px;
-  width: 200px;
-  padding: 0px;
+  height: 28px; /* less 2 for parent border */
+  width: 198px; /* less 2 for parent border */
+  padding: 7px;
   background: lightgrey;
-  border: 1px solid black;
-  line-height: 30px; /* equal to height */
-  text-align: center;
+  line-height: 14px; /* equal to height */
+  text-align: left;
   vertical-align: middle;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  /* font-weight: 400; */
   background: lightgrey;
-  color: grey;
 }
 /* styling on hover */
 .hidden-radio-div:hover {
@@ -93,6 +87,6 @@
 }
 /* styling when related hidden radio button selected */
 .hidden-radio-button:checked+.hidden-radio-label>.hidden-radio-div {
-  color: darkblue;
-  background: grey;
+  color: black;
+  background: lightgrey;
 }

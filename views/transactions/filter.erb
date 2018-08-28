@@ -7,20 +7,20 @@
   <div class="table-box"></div>
   <div class="table-box"></div>
 
-  <div class="table-head"><label for="start_date_time">StartDate-time</label></div>
+  <div class="table-head"><label for="start_date_time">Start Date-Time</label></div>
   <div class="table-box"><input id="start_date_time" class="input-date-time" type="datetime-local" name="start_date_time" /></div>
 
-  <div class="table-head"><label for="end_date_time">EndDate-time</label></div>
+  <div class="table-head"><label for="end_date_time">End Date-Time</label></div>
   <div class="table-box"><input id="end_date_time" class="input-date-time" type="datetime-local" name="end_date_time" /></div>
 
-  <div class="table-head"><label for="min_amount">MinAmount</label></div>
+  <div class="table-head"><label for="min_amount">Min Amount</label></div>
   <div class="table-box"><input id="min_amount" class="input-text" type="text" name="min_amount" value="" /></div>
 
-  <div class="table-head"><label for="max_amount">MaxAmount</label></div>
+  <div class="table-head"><label for="max_amount">Max Amount</label></div>
   <div class="table-box"><input id="max_amount" class="input-text" type="text" name="max_amount" value="" /></div>
 
-  <div class="table-head"><label>Select a merchant</label></div>
-  <div class="table-box">
+  <div class="table-head"><label>Select merchant</label></div>
+  <div class="table-box-contain">
     <div class="hidden-radio-dropdown">
       <% for merchant in @merchants %>
         <input type="radio" id="merchant<%= merchant.id %>" value="<%= merchant.id %>" class="hidden-radio-button" name="merchant_id">
@@ -29,8 +29,8 @@
     </div>
   </div>
 
-  <div class="table-head"><label>Select a tag</label></div>
-  <div class="table-box">
+  <div class="table-head"><label>Select tag</label></div>
+  <div class="table-box-contain">
     <div class="hidden-radio-dropdown">
       <% for tag in @tags %>
         <input type="radio" id="tag<%= tag.id %>" value="<%= tag.id %>" class="hidden-radio-button" name="tag_id">
@@ -38,9 +38,6 @@
       <% end %>
     </div>
   </div>
-
-  <div class="table-box"></div>
-  <div class="table-box"></div>
 
   <div class="table-box"></div>
   <div class="table-box"></div>
