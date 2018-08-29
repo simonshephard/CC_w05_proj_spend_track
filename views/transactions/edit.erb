@@ -8,13 +8,13 @@
   <div class="table-box"></div>
 
   <div class="table-head"><label for="date_time">Date-Time</label></div>
-  <div class="table-box"><input id="date_time" class="input-date-time" type="datetime-local" name="date_time" value=<%= @transaction.date_time %> /></div>
+  <div class="table-box"><input id="date_time" class="input-date-time" type="datetime-local" name="date_time" value="<%= @transaction.date_time %>" /></div>
 
   <div class="table-head"><label for="amount">Amount</label></div>
-  <div class="table-box"><input id="amount" class="input-text" type="text" name="amount" value=<%= Transaction.money_amount(@transaction.amount) %> /></div>
+  <div class="table-box"><input id="amount" class="input-text" type="text" name="amount" value="<%= Transaction.money_amount(@transaction.amount) %>" /></div>
 
   <div class="table-head"><label for="description">Description</label></div>
-  <div class="table-box"><input id="description" class="input-text" type="text" name="description" value=<%= @transaction.description %> /></div>
+  <div class="table-box"><input id="description" class="input-text" type="text" name="description" value="<%= @transaction.description %>" /></div>
 
   <div class="table-head"><label>Select a merchant</label></div>
   <div class="table-box">

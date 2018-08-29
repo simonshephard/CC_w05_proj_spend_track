@@ -31,6 +31,14 @@ end
 
 # EDIT
 get '/tags/:id/edit' do
+  filter_params = {}
+  filter_params[:start_date_time] = ""
+  filter_params[:end_date_time] = ""
+  filter_params[:min_amount] = ""
+  filter_params[:max_amount] = ""
+  filter_params[:merchant_id] # just do not set
+  filter_params[:tag_id] = params[:id]
+  @transactions = Transaction.filter(filter_params)
   @tag = Tag.find(params[:id])
   erb(:"tags/edit")
 end
@@ -39,7 +47,7 @@ end
 post '/tags/:id' do
   tag = Tag.new(params)
   tag.update
-  redirect to "/tags/#{tag.id}"
+  redirect to "/tags"
 end
 
 # DELETE
