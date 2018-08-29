@@ -2,6 +2,8 @@ require_relative("../db/sql_runner")
 
 class Transaction
 
+  @@current_transactions = []
+
   attr_reader :id, :date_time, :amount, :description, :merchant_id, :tag_id
 
   def initialize(options)
@@ -47,23 +49,23 @@ class Transaction
     data.map {|transaction| Transaction.new(transaction)}
   end
 
-  def self.sort_id
-    Transaction.all.sort_by{|transaction| transaction.id}
+  def self.sort_id(transactions)
+    transactions.sort_by{|transaction| transaction.id}
   end
-  def self.sort_time
-    Transaction.all.sort_by{|transaction| transaction.date_time}
+  def self.sort_time(transactions)
+    transactions.sort_by{|transaction| transaction.date_time}
   end
-  def self.sort_amount
-    Transaction.all.sort_by{|transaction| transaction.amount.to_f}
+  def self.sort_amount(transactions)
+    transactions.sort_by{|transaction| transaction.amount.to_f}
   end
-  def self.sort_description
-    Transaction.all.sort_by{|transaction| transaction.description}
+  def self.sort_description(transactions)
+    transactions.sort_by{|transaction| transaction.description}
   end
-  def self.sort_merchant
-    Transaction.all.sort_by{|transaction| transaction.merchant.name}
+  def self.sort_merchant(transactions)
+    transactions.sort_by{|transaction| transaction.merchant.name}
   end
-  def self.sort_tag
-    Transaction.all.sort_by{|transaction| transaction.tag.name}
+  def self.sort_tag(transactions)
+    transactions.sort_by{|transaction| transaction.tag.name}
   end
 
   def self.filter(params)
@@ -93,6 +95,13 @@ class Transaction
   def self.total(transactions)
     total = transactions.sum {|transaction| transaction.amount.to_f}
     total.to_s
+  end
+
+  def self.set_current(transactions)
+    @@current_transactions = transactions
+  end
+  def self.get_current
+    @@current_transactions
   end
 
   def merchant

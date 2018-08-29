@@ -1,4 +1,4 @@
-<h2>Transactions</h2>
+<h2>Transactions (total: <%= Transaction.money_amount(@total) %>)</h2>
 
 <div class="transactions-table">
 
@@ -33,19 +33,5 @@
   <div class="table-box ra"><%= transaction.tag.name %></div>
 
 <% end %>
-
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-
-  <div class="table-total la">Total</div>
-  <div class="table-total"></div>
-  <div class="table-total ra"><%= Transaction.money_amount(@total) %></h2></div>
-  <div class="table-total"></div>
-  <div class="table-total"></div>
-  <div class="table-total"></div>
 
 </div>

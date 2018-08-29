@@ -10,48 +10,49 @@ also_reload("../models/*")
 # INDEX
 get "/transactions" do
   @transactions = Transaction.all
+  Transaction.set_current(@transactions)
   @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end
 
 # INDEX - SORT BY ID
 get "/transactions/sort_id" do
-  @transactions = Transaction.sort_id
+  @transactions = Transaction.sort_id(Transaction.get_current)
   @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end
 
 # INDEX - SORT BY TIME
 get "/transactions/sort_time" do
-  @transactions = Transaction.sort_time
+  @transactions = Transaction.sort_time(Transaction.get_current)
   @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end
 
 # INDEX - SORT BY AMOUNT
 get "/transactions/sort_amount" do
-  @transactions = Transaction.sort_amount
+  @transactions = Transaction.sort_amount(Transaction.get_current)
   @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end
 
 # INDEX - SORT BY DESCRIPTION
 get "/transactions/sort_description" do
-  @transactions = Transaction.sort_description
+  @transactions = Transaction.sort_description(Transaction.get_current)
   @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end
 
 # INDEX - SORT BY MERCHANT
 get "/transactions/sort_merchant" do
-  @transactions = Transaction.sort_merchant
+  @transactions = Transaction.sort_merchant(Transaction.get_current)
   @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end
 
 # INDEX - SORT BY TAG
 get "/transactions/sort_tag" do
-  @transactions = Transaction.sort_tag
+  @transactions = Transaction.sort_tag(Transaction.get_current)
   @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end
@@ -66,6 +67,7 @@ end
 # INDEX - FILTERED
 get "/transactions/filtered" do
   @transactions = Transaction.filter(params)
+  Transaction.set_current(@transactions)
   @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end
