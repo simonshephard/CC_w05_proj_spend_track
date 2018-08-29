@@ -4,16 +4,17 @@ TUESDAY 20180828
 -1.Plan -
 -2.Scope -
 -3.Design -
--4.Develop - fixes filter for radio, adds sort for all, adds filtered sort, consolidate merchants
+-4.Develop - fixes filter for radio, adds sort for all, adds filtered sort, consolidate all 
 -5.Present -
 -6.PDA -
 
 NOTES
-DONE-fixed-boroken filter - radio returns nil so param key not created at all - check if key
+DONE-fixed-broken filter - radio returns nil so param key not created at all - check if key
 DONE-sort by all
 DONE-all on same page - tried transactions but not feasible
+OK-nav bar - just do button for new transaction rather than nav
 TODO-1.improve CSS/HTML??? HOW
-TODO-nav bar
+-button for new transaction
 -fix seeds
 -filter by all
 -budget per time period??

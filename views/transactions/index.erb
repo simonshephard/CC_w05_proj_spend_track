@@ -10,11 +10,11 @@
   <div class="table-box"></div>
 
   <div class="table-head la"><a class="remove-link" href="/transactions/sort_id">Id</a></div>
-  <div class="table-head ra"><a class="remove-link" href="/transactions/sort_time">Date-Time</a></div>
+  <div class="table-head la"><a class="remove-link" href="/transactions/sort_time">Date-Time</a></div>
   <div class="table-head ra"><a class="remove-link" href="/transactions/sort_amount">Amount</a></div>
-  <div class="table-head ra"><a class="remove-link" href="/transactions/sort_description">Description</a></div>
-  <div class="table-head ra"><a class="remove-link" href="/transactions/sort_merchant">Merchant</a></div>
-  <div class="table-head ra"><a class="remove-link" href="/transactions/sort_tag">Tag</a></div>
+  <div class="table-head la"><a class="remove-link" href="/transactions/sort_description">Description</a></div>
+  <div class="table-head ca"><a class="remove-link" href="/transactions/sort_merchant">Merchant</a></div>
+  <div class="table-head ca"><a class="remove-link" href="/transactions/sort_tag">Tag</a></div>
 
   <div class="table-box"></div>
   <div class="table-box"></div>
@@ -25,12 +25,12 @@
 
 <% @transactions.each do |transaction| %>
 
-  <div class="table-box la"><a href="/transactions/<%= transaction.id %>"><%= transaction.id %></a></div>
-  <div class="table-box ra"><%= transaction.date_time_format %></div>
+  <div class="table-box la"><a class="remove-link" href="/transactions/<%= transaction.id %>/edit"><div class="edit"><%= transaction.id %></div></a></div>
+  <div class="table-box la"><%= transaction.date_time_format %></div>
   <div class="table-box ra"><%= Transaction.money_amount(transaction.amount) %></div>
-  <div class="table-box ra"><%= transaction.description %></div>
-  <div class="table-box ra"><%= transaction.merchant.name %></div>
-  <div class="table-box ra"><%= transaction.tag.name %></div>
+  <div class="table-box la"><%= transaction.description %></div>
+  <div class="table-box ca"><%= transaction.merchant.name %></div>
+  <div class="table-box ca"><%= transaction.tag.name %></div>
 
 <% end %>
 

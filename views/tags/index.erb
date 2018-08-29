@@ -17,29 +17,21 @@
 </form>
 
 
-<div class="three-col-table">
+<div class="two-col-table">
 
-  <div class="table-box"></div>
   <div class="table-box"></div>
   <div class="table-box"></div>
 
   <div class="table-head">Id</div>
   <div class="table-head">Name</div>
-  <div class="table-head"></div>
 
-  <div class="table-box"></div>
   <div class="table-box"></div>
   <div class="table-box"></div>
 
 <% @tags.each do |tag| %>
 
-  <div class="table-box"><a href="/tags/<%= tag.id %>"><%= tag.id %></a></div>
+  <div class="table-box la"><a class="remove-link" href="/tags/<%= tag.id %>/edit"><div class="edit"><%= tag.id %></div></a></div>
   <div class="table-box"><%= tag.name %></div>
-  <div class="table-box">
-    <form method="get" action="/tags/<%= tag.id %>/edit">
-      <input class="input-submit" type='submit' value="Edit / Delete"/>
-    </form>
-  </div>
 
 <% end %>
 

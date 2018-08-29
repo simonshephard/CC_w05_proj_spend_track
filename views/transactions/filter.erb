@@ -19,7 +19,7 @@
   <div class="table-head"><label for="max_amount">Max Amount</label></div>
   <div class="table-box"><input id="max_amount" class="input-text" type="text" name="max_amount" value="" /></div>
 
-  <div class="table-head"><label>Select merchant</label></div>
+  <div class="table-head"><label>Merchant</label></div>
   <div class="table-box-contain">
     <div class="hidden-radio-dropdown">
       <% for merchant in @merchants %>
@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  <div class="table-head"><label>Select tag</label></div>
+  <div class="table-head"><label>Tag</label></div>
   <div class="table-box-contain">
     <div class="hidden-radio-dropdown">
       <% for tag in @tags %>
@@ -44,6 +44,12 @@
 
   <div class="table-head"></div>
   <div class="table-box"><input class="input-submit" type='submit' value="Filter Transactions"/></div>
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
+  <div class="table-box"></div>
+  <div class="table-box"><a class="remove-link" href="/transactions"><div class="input-submit input-submit-div">Cancel</div></a></div>
 
 </div>
 

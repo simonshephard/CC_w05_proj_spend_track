@@ -16,7 +16,7 @@
 
 <% @budgets.each do |budget| %>
 
-  <div class="table-box la"><a href="/budgets/<%= budget.id %>"><%= budget.id %></a></div>
+  <div class="table-box la"><a class="remove-link" href="/budgets/<%= budget.id %>/edit"><div class="edit"><%= budget.id %></div></a></div>
   <div class="table-box ra"><%= Budget.money_amount(budget.amount) %></div>
   <div class="table-box ra"><%= Budget.money_amount(budget.warning) %></div>
 

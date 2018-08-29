@@ -51,3 +51,15 @@ div .spacer {
 h2.warning {
   color: red;
 }
+
+.edit {
+  height: 30px;
+  width: 50px;
+  line-height: 30px;
+  text-align: center;
+  background: lightgreen;
+  border: 1px solid grey;
+}
+.edit:hover {
+  background: darkgreen;
+}
