@@ -128,5 +128,17 @@ class Transaction
     date_time[0,10] + " " + date_time[11,5]
   end
 
+  def month
+    date_time[5,2]
+  end
+
+  def year
+    date_time[0,4]
+  end
+
+  def year_month
+    year + "-" + month
+  end
+
 
 end

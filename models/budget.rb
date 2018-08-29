@@ -68,5 +68,18 @@ class Budget
     Budget.money_amount((@amount.to_f - total.to_f).to_s)
   end
 
+  def self.analysis
+    transactions = Transaction.all
+    spending_by_month = {}
+    transactions.each do |transaction|
+      if spending_by_month.has_key?(transaction.year_month)
+        spending_by_month[transaction.year_month] += transaction.amount.to_f
+      else
+        spending_by_month[transaction.year_month] = transaction.amount.to_f
+      end
+    end
+    spending_by_month
+  end
+
 
 end

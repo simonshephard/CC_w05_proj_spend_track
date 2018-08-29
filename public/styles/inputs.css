@@ -100,8 +100,8 @@
 }
 /* styling on active */
 .hidden-radio-div:active {
-  background: darkblue;
-  color: lightgrey;
+  background: orange;
+  color: darkblue;
 }
 /* styling when related hidden radio button selected */
 .hidden-radio-button:checked+.hidden-radio-label>.hidden-radio-div {

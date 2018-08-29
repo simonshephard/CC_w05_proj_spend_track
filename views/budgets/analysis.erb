@@ -1,0 +1,26 @@
+<h2>Analysis</h2>
+
+<div class="spacer"></div>
+
+<div class="four-col-table">
+
+  <div class="table-head la">Year-Month</div>
+  <div class="table-head ra">Total</div>
+  <div class="table-head ra">Budget</div>
+  <div class="table-head ra">Vs. Budget</div>
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
+<% @months.each do |month| %>
+
+  <div class="table-box ca"><%= month %></div>
+  <div class="table-box ra"><%= Budget.money_amount(@analysis[month].to_s) %></div>
+  <div class="table-box ra"><%= Budget.money_amount(@budget) %></div>
+  <div class="table-box ra"><%= Budget.money_amount((@analysis[month] - @budget.to_f).to_s) %></div>
+
+<% end %>
+
+</div>

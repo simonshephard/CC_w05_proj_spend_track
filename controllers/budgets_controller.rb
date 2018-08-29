@@ -19,6 +19,15 @@ get '/budgets/new' do
   erb(:"budgets/new")
 end
 
+# ANALYSIS
+get '/budgets/analysis' do
+  @analysis = Budget.analysis
+  @months = @analysis.keys.sort
+  @budget = Budget.money_amount(Budget.all[0].amount)
+  erb(:"budgets/analysis")
+end
+
+
 # SHOW
 get '/budgets/:id' do
   @budget = Budget.find(params[:id])

@@ -64,7 +64,10 @@ h2.warning {
   background: grey;
   color: white;
 }
-
+.edit:active {
+  background: orange;
+  color: darkblue;
+}
 .link-button {
   width: 200px;
   padding: 6px 20px;
@@ -78,4 +81,8 @@ h2.warning {
   cursor: pointer;
   background: grey;
   color: white
+}
+.link-button:active {
+  background: orange;
+  color: darkblue;
 }
