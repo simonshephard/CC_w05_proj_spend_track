@@ -1,15 +1,17 @@
 <h2>Transactions (total: <%= Transaction.money_amount(@total) %>)</h2>
 
+<div class="spacer"></div>
+
+<div class="two-col-table">
+  <div class="table-box ca"><a class="remove-link" href="/transactions/new"><div class="link-button">Add New</div></a></div>
+  <div class="table-box ca"><a class="remove-link" href="/transactions/filter"><div class="link-button">Filter</div></a></div>
+</div>
+
+<div class="spacer"></div>
+
 <div class="transactions-table">
 
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-
-  <div class="table-head la"><a class="remove-link" href="/transactions/sort_id">Id</a></div>
+  <div class="table-head ca"><a class="remove-link" href="/transactions/sort_id">Id / Edit</a></div>
   <div class="table-head la"><a class="remove-link" href="/transactions/sort_time">Date-Time</a></div>
   <div class="table-head ra"><a class="remove-link" href="/transactions/sort_amount">Amount</a></div>
   <div class="table-head la"><a class="remove-link" href="/transactions/sort_description">Description</a></div>
@@ -25,7 +27,7 @@
 
 <% @transactions.each do |transaction| %>
 
-  <div class="table-box la"><a class="remove-link" href="/transactions/<%= transaction.id %>/edit"><div class="edit"><%= transaction.id %></div></a></div>
+  <div class="table-box ca"><a class="remove-link" href="/transactions/<%= transaction.id %>/edit"><div class="edit"><%= transaction.id %></div></a></div>
   <div class="table-box la"><%= transaction.date_time_format %></div>
   <div class="table-box ra"><%= Transaction.money_amount(transaction.amount) %></div>
   <div class="table-box la"><%= transaction.description %></div>

@@ -8,9 +8,8 @@
   text-decoration: none;
 }
 .div-button {
-  width: 100px;
+  width: 120px;
   height: 50px;
-  /* border: 1px solid darkgrey; */
   background: lightgrey;
   color: grey;
   line-height: 50px;

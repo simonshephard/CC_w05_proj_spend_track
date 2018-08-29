@@ -14,7 +14,7 @@ div .spacer {
 #content-container {
   display: grid;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   grid-template-areas:
             "branding"
             "nav-bar"
@@ -54,12 +54,28 @@ h2.warning {
 
 .edit {
   height: 30px;
-  width: 50px;
+  width: 60px;
   line-height: 30px;
   text-align: center;
-  background: lightgreen;
+  background: lightgrey;
   border: 1px solid grey;
 }
 .edit:hover {
-  background: darkgreen;
+  background: grey;
+  color: white;
+}
+
+.link-button {
+  width: 200px;
+  padding: 6px 20px;
+  border: 1px solid grey;
+  font-size: 16px;
+  font-weight: 200;
+  background: lightgrey;
+  text-align: center;
+}
+.link-button:hover {
+  cursor: pointer;
+  background: grey;
+  color: white
 }

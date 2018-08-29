@@ -1,12 +1,10 @@
 <h2>Budgets</h2>
 
+<div class="spacer"></div>
+
 <div class="three-col-table">
 
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-
-  <div class="table-head la">Id</div>
+  <div class="table-head ca">Id / Edit</div>
   <div class="table-head ra">Amount</div>
   <div class="table-head ra">Warning</div>
 
@@ -16,43 +14,40 @@
 
 <% @budgets.each do |budget| %>
 
-  <div class="table-box la"><a class="remove-link" href="/budgets/<%= budget.id %>/edit"><div class="edit"><%= budget.id %></div></a></div>
+  <div class="table-box ca"><a class="remove-link" href="/budgets/<%= budget.id %>/edit"><div class="edit"><%= budget.id %></div></a></div>
   <div class="table-box ra"><%= Budget.money_amount(budget.amount) %></div>
   <div class="table-box ra"><%= Budget.money_amount(budget.warning) %></div>
 
 <% end %>
 
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
+</div>
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<div class="two-col-table">
 
   <div class="table-head la">Budget</div>
-  <div class="table-box"></div>
   <div class="table-head ra"><%= Budget.money_amount(@budgets[0].amount) %></div>
 
   <div class="table-head la">Transaction Total</div>
-  <div class="table-box"></div>
   <div class="table-head ra"><%= Budget.money_amount(@total) %></div>
 
   <div class="table-head la">Capacity</div>
-  <div class="table-box"></div>
   <div class="table-head ra"><%=  @budgets[0].capacity %></div>
 
 <% if @total.to_f > @budgets[0].warning.to_f %>
 
   <div class="table-warning la">Limit</div>
-  <div class="table-box"></div>
   <div class="table-warning ra"><%= Budget.money_amount(@budgets[0].warning) %></div>
 
   <div class="table-warning la">WARNING</div>
-  <div class="table-box"></div>
   <div class="table-warning ra">ABOVE LIMIT</div>
 
 <% else %>
 
   <div class="table-head">Limit</div>
   <div class="table-head"><%= Budget.money_amount(@budgets[0].warning) %></div>
-  <div class="table-box"></div>
 
 <% end %>
 

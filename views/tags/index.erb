@@ -22,16 +22,16 @@
   <div class="table-box"></div>
   <div class="table-box"></div>
 
-  <div class="table-head">Id</div>
-  <div class="table-head">Name</div>
+  <div class="table-head ca">Id / Edit</div>
+  <div class="table-head la">Name</div>
 
   <div class="table-box"></div>
   <div class="table-box"></div>
 
 <% @tags.each do |tag| %>
 
-  <div class="table-box la"><a class="remove-link" href="/tags/<%= tag.id %>/edit"><div class="edit"><%= tag.id %></div></a></div>
-  <div class="table-box"><%= tag.name %></div>
+  <div class="table-box ca"><a class="remove-link" href="/tags/<%= tag.id %>/edit"><div class="edit"><%= tag.id %></div></a></div>
+  <div class="table-box la"><%= tag.name %></div>
 
 <% end %>
 

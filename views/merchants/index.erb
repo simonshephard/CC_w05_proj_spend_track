@@ -22,16 +22,16 @@
   <div class="table-box"></div>
   <div class="table-box"></div>
 
-  <div class="table-head">Id</div>
-  <div class="table-head">Name</div>
+  <div class="table-head ca">Id / Edit</div>
+  <div class="table-head la">Name</div>
 
   <div class="table-box"></div>
   <div class="table-box"></div>
 
 <% @merchants.each do |merchant| %>
 
-  <div class="table-box la"><a class="remove-link" href="/merchants/<%= merchant.id %>/edit"><div class="edit"><%= merchant.id %></div></a></div>
-  <div class="table-box"><%= merchant.name %></div>
+  <div class="table-box ca"><a class="remove-link" href="/merchants/<%= merchant.id %>/edit"><div class="edit"><%= merchant.id %></div></a></div>
+  <div class="table-box la"><%= merchant.name %></div>
 
 <% end %>
 

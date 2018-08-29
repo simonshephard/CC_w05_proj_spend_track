@@ -4,32 +4,36 @@ TUESDAY 20180828
 -1.Plan -
 -2.Scope -
 -3.Design -
--4.Develop - fixes filter for radio, adds sort for all, adds filtered sort, consolidate all 
--5.Present -
--6.PDA -
+-4.Develop - fixes filter for radio, adds sort for all, adds filtered sort, consolidate all, buttons new transactions/filter
+-5.Present - updated wireframes, site map, presentation
+-6.PDA - updated wireframes, site map
 
 NOTES
 DONE-fixed-broken filter - radio returns nil so param key not created at all - check if key
 DONE-sort by all
 DONE-all on same page - tried transactions but not feasible
 OK-nav bar - just do button for new transaction rather than nav
-TODO-1.improve CSS/HTML??? HOW
--button for new transaction
--fix seeds
--filter by all
--budget per time period??
+DONE-button for new transaction
+DONE-filter by all
+DONE-improve CSS/HTML??? HOW
+OK-on delete tags - instead of removing ON DELETE CASCADE - check sure and list all the transactions it will delete - use filter
+OK-have default "--" or "other" tag and merchant that can be entered for new - need to make unable to delete
+OK-remove delete from budget - and ids - just have a single budget??
+OK-remove some other functionality from budget??
+DONE-back to xxx button on edit or save or cancel something
+OK-do delete/find as class method??
+DONE-refactor budget calc to put inside class not view
+TODO-fix and extend seeds
+TODO-budget per time period??
 TODO-3.money format - right align and add comma formats
 TODO-2.charts/analysis
-TODO-4.do, review and update presentation - update wireframe2 - update sitemap
+TODO-4.do, review and update presentation
+-front page highlights
+-responsive grid
+-better consistent colors - dark blue, greys, plus green, orange, reds
+-add heading sort for merchant and tag
 -refactor money formatting - make more consistent - and consistent store as integer and recover??
--on delete tags - instead of removing ON DELETE CASCADE - check sure and list all the transactions it will delete - use filter
--back to xxx button on edit or save or cancel something
--have default "--" or "other" tag and merchant that can be entered for new - need to make unable to delete
 -add notes to design on process for updating description and date
--remove delete from budget - and ids - just have a single budget??
--remove some other functionality from budget??
--refactor budget calc to put inside class not view
--do delete/find as class method??
 
 
 TUESDAY 20180828
