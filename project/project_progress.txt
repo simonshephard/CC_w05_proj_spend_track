@@ -3,20 +3,22 @@
 TUESDAY 20180828
 -1.Plan -
 -2.Scope -
--3.Design - use DECIMAL(13,4), warning limit
--4.Develop - update to DECIMAL(13,4), price format and view, grid view for tag/merchant/budget index/show/new/edit/filter, format date_time, styling date_time, default now, warning limit, better spacing
--5.Present - class and object diagrams
--6.PDA - class and object diagrams
+-3.Design -
+-4.Develop - fixes filter for radio
+-5.Present -
+-6.PDA -
 
 NOTES
-DONE-format amount in views - pretty_price??
-DONE-better grid - and extend
-DONE-format date-time in views
-DONE-object diagrams
-TODO-1.improve CSS/HTML
-TODO-2.charts/analysis
+TODO-1.improve CSS/HTML??? HOW
+TODO-nav bar
+-fix seeds
+-sort by all
+-filter by all
+all on same page
 TODO-3.money format - right align and add comma formats
+TODO-2.charts/analysis
 TODO-4.do, review and update presentation - update wireframe2 - update sitemap
+DONE-fixed-boroken filter - radio returns nil so param key not created at all - check if key
 -refactor money formatting - make more consistent - and consistent store as integer and recover??
 -on delete tags - instead of removing ON DELETE CASCADE - check sure and list all the transactions it will delete - use filter
 -back to xxx button on edit or save or cancel something
@@ -26,6 +28,21 @@ TODO-4.do, review and update presentation - update wireframe2 - update sitemap
 -remove some other functionality from budget??
 -refactor budget calc to put inside class not view
 -do delete/find as class method??
+
+
+TUESDAY 20180828
+-1.Plan -
+-2.Scope -
+-3.Design - use DECIMAL(13,4), warning limit
+-4.Develop - update to DECIMAL(13,4), price format and view, grid view for tag/merchant/budget index/show/new/edit/filter, format date_time, styling date_time, default now, warning limit, better spacing, better grid, minmax cols, lighter weight font
+-5.Present - class and object diagrams
+-6.PDA - class and object diagrams
+
+NOTES
+DONE-format amount in views - pretty_price??
+DONE-better grid - and extend
+DONE-format date-time in views
+DONE-object diagrams
 
 
 MONDAY 20180827

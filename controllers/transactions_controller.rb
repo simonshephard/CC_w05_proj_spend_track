@@ -14,9 +14,44 @@ get "/transactions" do
   erb(:"transactions/index")
 end
 
+# INDEX - SORT BY ID
+get "/transactions/sort_id" do
+  @transactions = Transaction.sort_id
+  @total = Transaction.total(@transactions)
+  erb(:"transactions/index")
+end
+
 # INDEX - SORT BY TIME
 get "/transactions/sort_time" do
   @transactions = Transaction.sort_time
+  @total = Transaction.total(@transactions)
+  erb(:"transactions/index")
+end
+
+# INDEX - SORT BY AMOUNT
+get "/transactions/sort_amount" do
+  @transactions = Transaction.sort_amount
+  @total = Transaction.total(@transactions)
+  erb(:"transactions/index")
+end
+
+# INDEX - SORT BY DESCRIPTION
+get "/transactions/sort_description" do
+  @transactions = Transaction.sort_description
+  @total = Transaction.total(@transactions)
+  erb(:"transactions/index")
+end
+
+# INDEX - SORT BY MERCHANT
+get "/transactions/sort_merchant" do
+  @transactions = Transaction.sort_merchant
+  @total = Transaction.total(@transactions)
+  erb(:"transactions/index")
+end
+
+# INDEX - SORT BY TAG
+get "/transactions/sort_tag" do
+  @transactions = Transaction.sort_tag
   @total = Transaction.total(@transactions)
   erb(:"transactions/index")
 end

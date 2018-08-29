@@ -47,8 +47,23 @@ class Transaction
     data.map {|transaction| Transaction.new(transaction)}
   end
 
+  def self.sort_id
+    Transaction.all.sort_by{|transaction| transaction.id}
+  end
   def self.sort_time
     Transaction.all.sort_by{|transaction| transaction.date_time}
+  end
+  def self.sort_amount
+    Transaction.all.sort_by{|transaction| transaction.amount.to_f}
+  end
+  def self.sort_description
+    Transaction.all.sort_by{|transaction| transaction.description}
+  end
+  def self.sort_merchant
+    Transaction.all.sort_by{|transaction| transaction.merchant.name}
+  end
+  def self.sort_tag
+    Transaction.all.sort_by{|transaction| transaction.tag.name}
   end
 
   def self.filter(params)
@@ -57,8 +72,8 @@ class Transaction
     transactions = transactions.select {|transaction| transaction.date_time <= params[:end_date_time]} if params[:end_date_time] != ""
     transactions = transactions.select {|transaction| transaction.amount >= params[:min_amount].to_f} if params[:min_amount] != ""
     transactions = transactions.select {|transaction| transaction.amount <= params[:max_amount].to_f} if params[:max_amount] != ""
-    transactions = transactions.select {|transaction| transaction.merchant_id == params[:merchant_id].to_i} if params[:merchant_id] != ""
-    transactions = transactions.select {|transaction| transaction.tag_id == params[:tag_id].to_i} if params[:tag_id] != ""
+    transactions = transactions.select {|transaction| transaction.merchant_id == params[:merchant_id].to_i} if params.has_key?(:merchant_id)
+    transactions = transactions.select {|transaction| transaction.tag_id == params[:tag_id].to_i} if params.has_key?(:tag_id)
     transactions
   end
 

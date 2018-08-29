@@ -25,9 +25,9 @@
   color: white;
 }
 
-.header-link {
+.remove-link {
   text-decoration: none;
-  color: white;
+  color: inherit;
 }
 
 #nav-bar {
