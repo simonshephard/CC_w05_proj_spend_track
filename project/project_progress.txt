@@ -11,11 +11,12 @@ TUESDAY 20180828
 NOTES
 DONE-fixed-boroken filter - radio returns nil so param key not created at all - check if key
 DONE-sort by all
+DONE-all on same page - tried transactions but not feasible
 TODO-1.improve CSS/HTML??? HOW
 TODO-nav bar
 -fix seeds
 -filter by all
-all on same page
+-budget per time period??
 TODO-3.money format - right align and add comma formats
 TODO-2.charts/analysis
 TODO-4.do, review and update presentation - update wireframe2 - update sitemap

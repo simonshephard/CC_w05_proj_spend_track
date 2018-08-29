@@ -10,47 +10,31 @@
 
   <div class="table-head"><label for="name">Edit</label></div>
   <div class="table-box"><input id="name" class="input-text" type="text" name="name" value="<%= @tag.name %>" /></div>
-  <div class="table-box"><input class="input-submit" type='submit' value="Confirm Edit"/></div>
-
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
+  <div class="table-box"><input class="input-submit input-submit-edit" type='submit' value="Confirm Edit"/></div>
 
 </div>
 
 </form>
 
+<div class="spacer"></div>
+<div class="spacer"></div>
 
-<h2>Delete Tag <%= @tag.id %>:  WARNING - WILL DELETE THESE TRANSACTIONS</h2>
+<h2>Delete Tag <%= @tag.id %></h2>
+<h2 class="warning">WARNING - WILL DELETE THESE TRANSACTIONS</h2>
+
+
+<div class="spacer"></div>
 
 <form method="post" action="/tags/<%= @tag.id %>/delete">
+  <div class="two-col-table">
+    <div class="table-box"><a class="remove-link" href="/tags"><div class="input-submit input-submit-div">Cancel</div></a></div>
+    <div class="table-box"><input class="input-submit input-submit-delete" type='submit' value="Confirm Delete"/></div>
+  </div>
+</form>
+
+<div class="spacer"></div>
 
 <div class="transactions-table">
-
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-
-  <div class="table-head">Delete</div>
-  <div class="table-box"><input class="input-submit" type='submit' value="Confirm Delete"/></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
 
   <div class="table-head la">Id</div>
   <div class="table-head ra">Date-Time</div>
@@ -78,5 +62,3 @@
 <% end %>
 
 </div>
-
-</form>

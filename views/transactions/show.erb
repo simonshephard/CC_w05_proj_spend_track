@@ -37,19 +37,8 @@
   <div class="table-box"></div>
   <div class="table-box"></div>
 
-  <div class="table-box">
-    <form method="get" action="/transactions/<%= @transaction.id %>/edit">
-      <input class="input-submit" type='submit' value="Edit Transaction"/>
-    </form>
-  </div>
-  <div class="table-box">
-    <form method="post" action="/transactions/<%= @transaction.id %>/delete">
-      <input class="input-submit" type='submit' value="Delete Transaction"/>
-    </form>
-  </div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-  <div class="table-box"></div>
-
 </div>
+
+<form method="get" action="/transactions/<%= @transaction.id %>/edit">
+  <input class="input-submit" type='submit' value="Edit / Delete"/>
+</form>

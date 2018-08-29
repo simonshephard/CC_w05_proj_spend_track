@@ -1,13 +1,29 @@
 .input-submit {
-  /* width: 200px; */
+  width: 200px;
   padding: 6px 20px;
   border: 1px solid black;
   font-size: 16px;
   font-weight: 200;
-  background: lightgrey;
+  background: lightgreen;
 }
 .input-submit:hover {
   cursor: pointer;
+  background: darkgreen;
+}
+.input-submit-edit {
+  background: orange;
+}
+.input-submit-edit:hover {
+  background: darkorange;
+}
+.input-submit-delete {
+  background: red;
+}
+.input-submit-delete:hover {
+  background: darkred;
+}
+.input-submit-div {
+  text-align: center;
 }
 
 .input-text {
@@ -17,6 +33,7 @@
   font-size: 14px;
   font-weight: 200;
   background: lightgrey;
+  text-align: right;
 }
 
 .input-date-time {
@@ -27,6 +44,7 @@
   font-size: 14px;
   font-weight: 200;
   background: lightgrey;
+  text-align: right;
 }
 
 /* container */
@@ -34,6 +52,7 @@
   position: absolute;
   display: inline;
   height: 30px;
+  width: 100%;
   width: 200px;
   background: lightgrey;
   border: 1px solid black;
@@ -68,7 +87,7 @@
   padding: 7px;
   background: lightgrey;
   line-height: 14px; /* equal to height */
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
   font-size: 14px;
   /* font-weight: 400; */

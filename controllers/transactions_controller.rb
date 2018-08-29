@@ -9,6 +9,8 @@ also_reload("../models/*")
 
 # INDEX
 get "/transactions" do
+  @tags = Tag.all
+  @merchants = Merchant.all
   @transactions = Transaction.all
   Transaction.set_current(@transactions)
   @total = Transaction.total(@transactions)

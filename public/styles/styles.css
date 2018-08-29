@@ -6,6 +6,11 @@
   font-family: Helvetica, sans-serif;
 }
 
+div .spacer {
+  height: 30px;
+  width: 100%;
+}
+
 #content-container {
   display: grid;
   width: 100%;
@@ -41,4 +46,8 @@
   padding-left: 20px;
   background: white;
   color: darkblue;
+}
+
+h2.warning {
+  color: red;
 }

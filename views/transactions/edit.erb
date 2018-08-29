@@ -16,8 +16,8 @@
   <div class="table-head"><label for="description">Description</label></div>
   <div class="table-box"><input id="description" class="input-text" type="text" name="description" value="<%= @transaction.description %>" /></div>
 
-  <div class="table-head"><label>Select a merchant</label></div>
-  <div class="table-box">
+  <div class="table-head"><label>Merchant</label></div>
+  <div class="table-box-contain">
     <div class="hidden-radio-dropdown">
       <% for merchant in @merchants %>
         <% if merchant.id == @transaction.merchant.id %>
@@ -31,8 +31,8 @@
     </div>
   </div>
 
-  <div class="table-head"><label>Select a tag</label></div>
-  <div class="table-box">
+  <div class="table-head"><label>Tag</label></div>
+  <div class="table-box-contain">
     <div class="hidden-radio-dropdown">
       <% for tag in @tags %>
         <% if tag.id == @transaction.tag.id %>
@@ -49,9 +49,26 @@
   <div class="table-box"></div>
   <div class="table-box"></div>
 
-  <div class="table-head"></div>
-  <div class="table-box"><input class="input-submit" type='submit' value="Edit Transaction"/></div>
+  <div class="table-box"></div>
+  <div class="table-box"><input class="input-submit" type='submit' value="Confirm Edit"/></div>
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
 
 </div>
+
+</form>
+
+<h2>Delete Transaction <%= @transaction.id %></h2>
+
+<form method="post" action="/transactions/<%= @transaction.id %>/delete">
+
+<div class="two-col-table">
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
+  <div class="table-box"><input class="input-submit" type='submit' value="Confirm Delete"/></div>
+  <div class="table-box"></div>
 
 </form>
