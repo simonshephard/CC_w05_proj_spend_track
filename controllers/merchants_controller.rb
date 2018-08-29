@@ -2,6 +2,7 @@ require("sinatra")
 require("sinatra/contrib/all")
 require("pry-byebug")
 require_relative("../models/merchant")
+require_relative("../models/transaction")
 also_reload("../models/*")
 
 
@@ -31,6 +32,14 @@ end
 
 # EDIT
 get '/merchants/:id/edit' do
+  filter_params = {}
+  filter_params[:start_date_time] = ""
+  filter_params[:end_date_time] = ""
+  filter_params[:min_amount] = ""
+  filter_params[:max_amount] = ""
+  filter_params[:merchant_id] = params[:id]
+  # filter_params[:tag_id] # just do not set
+  @transactions = Transaction.filter(filter_params)
   @merchant = Merchant.find(params[:id])
   erb(:"merchants/edit")
 end

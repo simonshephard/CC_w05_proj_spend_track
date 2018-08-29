@@ -19,6 +19,13 @@
   grid-auto-rows: minmax(30px, auto);
 }
 
+.four-col-table {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+  grid-auto-rows: minmax(30px, auto);
+}
+
 .table-head {
   padding: 0 15px;
   font-weight: 600;

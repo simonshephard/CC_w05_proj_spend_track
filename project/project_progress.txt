@@ -4,21 +4,21 @@ TUESDAY 20180828
 -1.Plan -
 -2.Scope -
 -3.Design -
--4.Develop - fixes filter for radio
+-4.Develop - fixes filter for radio, adds sort for all, adds filtered sort, consolidate merchants
 -5.Present -
 -6.PDA -
 
 NOTES
+DONE-fixed-boroken filter - radio returns nil so param key not created at all - check if key
+DONE-sort by all
 TODO-1.improve CSS/HTML??? HOW
 TODO-nav bar
 -fix seeds
--sort by all
 -filter by all
 all on same page
 TODO-3.money format - right align and add comma formats
 TODO-2.charts/analysis
 TODO-4.do, review and update presentation - update wireframe2 - update sitemap
-DONE-fixed-boroken filter - radio returns nil so param key not created at all - check if key
 -refactor money formatting - make more consistent - and consistent store as integer and recover??
 -on delete tags - instead of removing ON DELETE CASCADE - check sure and list all the transactions it will delete - use filter
 -back to xxx button on edit or save or cancel something

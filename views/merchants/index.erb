@@ -1,13 +1,33 @@
 <h2>Merchants</h2>
 
-<div class="two-col-table">
+<form method="post" action="/merchants">
 
+<div class="three-col-table">
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
+  <div class="table-head"><label for="name">Enter New</label></div>
+  <div class="table-box"><input id="name" class="input-text" type="text" name="name" /></div>
+  <div class="table-box"><input class="input-submit" type='submit' value="Confirm New"/></div>
+
+</div>
+
+</form>
+
+
+<div class="three-col-table">
+
+  <div class="table-box"></div>
   <div class="table-box"></div>
   <div class="table-box"></div>
 
   <div class="table-head">Id</div>
   <div class="table-head">Name</div>
+  <div class="table-head"></div>
 
+  <div class="table-box"></div>
   <div class="table-box"></div>
   <div class="table-box"></div>
 
@@ -15,6 +35,11 @@
 
   <div class="table-box"><a href="/merchants/<%= merchant.id %>"><%= merchant.id %></a></div>
   <div class="table-box"><%= merchant.name %></div>
+  <div class="table-box">
+    <form method="get" action="/merchants/<%= merchant.id %>/edit">
+      <input class="input-submit" type='submit' value="Edit / Delete"/>
+    </form>
+  </div>
 
 <% end %>
 

@@ -2,19 +2,80 @@
 
 <form method="post" action="/merchants/<%= @merchant.id %>">
 
-<div class="two-col-table">
+<div class="three-col-table">
 
   <div class="table-box"></div>
   <div class="table-box"></div>
+  <div class="table-box"></div>
 
-  <div class="table-head"><label for="name">Name:</label></div>
+  <div class="table-head"><label for="name">Edit</label></div>
   <div class="table-box"><input id="name" class="input-text" type="text" name="name" value=<%= @merchant.name %> /></div>
+  <div class="table-box"><input class="input-submit" type='submit' value="Confirm Edit"/></div>
 
   <div class="table-box"></div>
   <div class="table-box"></div>
+  <div class="table-box"></div>
 
-  <div class="table-head"></div>
-  <div class="table-box"><input class="input-submit" type='submit' value="Edit Merchant"/></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
+</div>
+
+</form>
+
+
+<h2>Delete Merchant <%= @merchant.id %>:  WARNING - WILL DELETE THESE TRANSACTIONS</h2>
+
+<form method="post" action="/merchants/<%= @merchant.id %>/delete">
+
+<div class="transactions-table">
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
+  <div class="table-head">Delete</div>
+  <div class="table-box"><input class="input-submit" type='submit' value="Confirm Delete"/></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
+  <div class="table-head la">Id</div>
+  <div class="table-head ra">Date-Time</div>
+  <div class="table-head ra">Amount</div>
+  <div class="table-head ra">Description</div>
+  <div class="table-head ra">Merchant</div>
+  <div class="table-head ra">Tag</div>
+
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+  <div class="table-box"></div>
+
+<% @transactions.each do |transaction| %>
+
+  <div class="table-box la"><a href="/transactions/<%= transaction.id %>"><%= transaction.id %></a></div>
+  <div class="table-box ra"><%= transaction.date_time_format %></div>
+  <div class="table-box ra"><%= Transaction.money_amount(transaction.amount) %></div>
+  <div class="table-box ra"><%= transaction.description %></div>
+  <div class="table-box ra"><%= transaction.merchant.name %></div>
+  <div class="table-box ra"><%= transaction.tag.name %></div>
+
+<% end %>
 
 </div>
 
