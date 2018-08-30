@@ -1,6 +1,27 @@
 
 
-TUESDAY 20180828
+THURSDAY 20180830
+-1.Plan -
+-2.Scope -
+-3.Design -
+-4.Develop - analysis by month, sorting reverse, sort X, time, ID, money format 000
+-5.Present -
+-6.PDA -
+
+NOTES
+DONE-money format - right align and add comma formats
+DONE-charts/analysis
+TODO-do, review and update presentation
+-more seeds - rent every month
+-front page highlights
+-responsive grid
+-better consistent colors - dark blue, greys, plus green, orange, reds
+-add heading sort for merchant and tag
+-refactor money formatting - make more consistent - and consistent store as integer and recover??
+-add notes to design on process for updating description and date
+
+
+WEDNESDAY 20180829
 -1.Plan -
 -2.Scope -
 -3.Design - analysis
@@ -25,16 +46,6 @@ OK-do delete/find as class method??
 DONE-refactor budget calc to put inside class not view
 DONE-budget per time period??
 DONE-fix and extend seeds
-TODO-3.money format - right align and add comma formats
-TODO-2.charts/analysis
-TODO-4.do, review and update presentation
--more seeds - rent every month
--front page highlights
--responsive grid
--better consistent colors - dark blue, greys, plus green, orange, reds
--add heading sort for merchant and tag
--refactor money formatting - make more consistent - and consistent store as integer and recover??
--add notes to design on process for updating description and date
 
 
 TUESDAY 20180828

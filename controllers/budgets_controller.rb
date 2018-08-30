@@ -11,6 +11,7 @@ get "/budgets" do
   @budgets = Budget.all
   transactions = Transaction.all
   @total = Transaction.total(transactions)
+  @analysis = Budget.analysis
   erb(:"budgets/index")
 end
 
@@ -49,7 +50,7 @@ end
 post '/budgets/:id' do
   budget = Budget.new(params)
   budget.update
-  redirect to "/budgets/#{budget.id}"
+  redirect to "/budgets"
 end
 
 # DELETE
