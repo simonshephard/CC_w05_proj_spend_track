@@ -25,7 +25,11 @@
   <div class="table-box ra"><%= @analysis[2][month] %></div>
   <div class="table-box ra"><%= @analysis[3][month] %></div>
   <div class="table-box la"><span><%= @analysis[4][month] %></span><span class="red-span"><%= @analysis[5][month] %></span></div>
-  <div class="table-box"></div>
+  <% if @analysis[5][month] == "" %>
+    <div class="table-box"></div>
+  <% else %>
+    <div class="table-box"><span class="red-span">WARNING: OVERBUDGET</span></div>
+  <% end %>
 
 <% end %>
 

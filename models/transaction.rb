@@ -62,25 +62,25 @@ class Transaction
   end
 
   def self.sort_amount(transactions)
-    sorted = transactions.sort_by{|transaction| [transaction.amount.to_f, transaction.id]}
+    sorted = transactions.sort_by{|transaction| [transaction.amount.to_f, transaction.date_time, transaction.id]}
     return sorted.reverse! if sorted == transactions
     sorted
   end
 
   def self.sort_description(transactions)
-    sorted = transactions.sort_by{|transaction| [transaction.description, transaction.id]}
+    sorted = transactions.sort_by{|transaction| [transaction.description, transaction.date_time, transaction.id]}
     return sorted.reverse! if sorted == transactions
     sorted
   end
 
   def self.sort_merchant(transactions)
-    sorted = transactions.sort_by{|transaction| [transaction.merchant.name, transaction.id]}
+    sorted = transactions.sort_by{|transaction| [transaction.merchant.name, transaction.date_time, transaction.id]}
     return sorted.reverse! if sorted == transactions
     sorted
   end
 
   def self.sort_tag(transactions)
-    sorted = transactions.sort_by{|transaction| [transaction.tag.name, transaction.id]}
+    sorted = transactions.sort_by{|transaction| [transaction.tag.name, transaction.date_time, transaction.id]}
     return sorted.reverse! if sorted == transactions
     sorted
   end
