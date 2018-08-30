@@ -4,23 +4,26 @@
   border: 1px solid black;
   font-size: 16px;
   font-weight: 200;
-  background: lightgreen;
+  background: green;
 }
 .input-submit:hover {
   cursor: pointer;
   background: darkgreen;
+  color: white;
 }
 .input-submit-edit {
   background: orange;
 }
 .input-submit-edit:hover {
-  background: darkorange;
+  background: rgb(236, 88, 0);
+  color: white;
 }
 .input-submit-delete {
   background: red;
 }
 .input-submit-delete:hover {
   background: darkred;
+  color: white;
 }
 .input-submit-div {
   text-align: center;
@@ -29,7 +32,7 @@
 .input-text {
   width: 200px;
   padding: 7px;
-  border: 1px solid black;
+  border: 1px solid grey;
   font-size: 14px;
   font-weight: 200;
   background: lightgrey;
@@ -40,7 +43,7 @@
   width: 200px;
   padding: 5px;
   /* adds extra 2px I think */
-  border: 1px solid black;
+  border: 1px solid grey;
   font-size: 14px;
   font-weight: 200;
   background: lightgrey;
@@ -54,7 +57,7 @@
   height: 30px;
   width: 200px;
   background: lightgrey;
-  border: 1px solid black;
+  border: 1px solid grey;
 }
 /* hide the radio buttons */
 .hidden-radio-button {
