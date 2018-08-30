@@ -11,7 +11,7 @@
   <div class="table-box"><input id="date_time" class="input-date-time" type="datetime-local" name="date_time" value="<%= @transaction.date_time %>" /></div>
 
   <div class="table-head"><label for="amount">Amount</label></div>
-  <div class="table-box"><input id="amount" class="input-text" type="text" name="amount" value="<%= Transaction.money_amount(@transaction.amount) %>" /></div>
+  <div class="table-box"><input id="amount" class="input-text" type="text" name="amount" value="<%= Transaction.money_input(@transaction.amount) %>" /></div>
 
   <div class="table-head"><label for="description">Description</label></div>
   <div class="table-box"><input id="description" class="input-text" type="text" name="description" value="<%= @transaction.description %>" /></div>

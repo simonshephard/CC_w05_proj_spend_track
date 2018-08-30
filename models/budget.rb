@@ -58,6 +58,10 @@ class Budget
     Budget.new(data.first)
   end
 
+  def self.money_input(amount_str)
+    sprintf("%#.2f", amount_str)
+  end
+
   def self.money_amount(amount_str)
     str = sprintf("%#.2f", amount_str)
     str = str.reverse.gsub(/(\d{3})/,"\\1,").chomp(",").reverse
@@ -92,33 +96,39 @@ class Budget
     monthly_spend = []
     budget_repeat = []
     vs_budget = []
-    chart_tobudget = []
-    chart_overbudget = []
+    chart_under = []
+    chart_warning = []
+    chart_over = []
     for month in months
       monthly_spend << Budget.money_amount(spending[month].to_s)
       budget_repeat << budget_formatted
       vs_budget << Budget.money_amount((spending[month] - budget.to_f).to_s)
-      units = (spending[month] / (Budget.all[0].amount.to_f / 20.0)).ceil
-      if units > 20
-        # chart_tobudget <<  "*" * 10
-        # chart_overbudget <<  "*" * (units-10)
-        chart_tobudget <<  "I" * 20
-        chart_overbudget <<  "I" * (units-20)
+      scale_unit = Budget.all[0].amount.to_f / 20.0
+      over_units = 0
+      warning_units = 0
+      under_units = 0
+      if spending[month] > Budget.all[0].amount.to_f
+        over_units = ((spending[month] - Budget.all[0].amount.to_f) / scale_unit).ceil
+        warning_units = ((Budget.all[0].amount.to_f - Budget.all[0].warning.to_f) / scale_unit).ceil
+        under_units = ((Budget.all[0].warning.to_f - 0) / scale_unit).ceil
+      elsif spending[month] > Budget.all[0].warning.to_f
+        warning_units = ((spending[month] - Budget.all[0].warning.to_f) / scale_unit).ceil
+        under_units = ((Budget.all[0].warning.to_f - 0) / scale_unit).ceil
       else
-        # chart_tobudget << "*" * units
-        # chart_overbudget << ""
-        chart_tobudget << "I" * units
-        chart_overbudget << ""
+        under_units = ((spending[month] - 0) / scale_unit).ceil
       end
+      chart_under <<  "I" * under_units
+      chart_warning <<  "I" * warning_units
+      chart_over <<  "I" * over_units
     end
-
     result = []
     result << months
     result << monthly_spend
     result << budget_repeat
     result << vs_budget
-    result << chart_tobudget
-    result << chart_overbudget
+    result << chart_under
+    result << chart_warning
+    result << chart_over
     result
   end
 

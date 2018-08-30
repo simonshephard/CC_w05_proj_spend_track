@@ -91,3 +91,11 @@ h2.warning {
   color: red;
   font-weight: 700;
 }
+.orange-span {
+  color: orange;
+  font-weight: 700;
+}
+.green-span {
+  color: green;
+  font-weight: 700;
+}

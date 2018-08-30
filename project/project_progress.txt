@@ -3,16 +3,16 @@
 THURSDAY 20180830
 -1.Plan -
 -2.Scope -
--3.Design -
--4.Develop - analysis by month, sorting reverse, sort X, time, ID, money format 000
+-3.Design - reinstate money format for inputs without comma
+-4.Develop - analysis by month, sorting reverse, sort X, time, ID, money format 000, consolidate budget analysis to 1 page, chart
 -5.Present -
 -6.PDA -
 
 NOTES
 DONE-money format - right align and add comma formats
 DONE-charts/analysis
+DONE-more seeds - rent every month
 TODO-do, review and update presentation
--more seeds - rent every month
 -front page highlights
 -responsive grid
 -better consistent colors - dark blue, greys, plus green, orange, reds

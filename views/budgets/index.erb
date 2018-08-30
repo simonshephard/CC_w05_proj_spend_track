@@ -1,4 +1,4 @@
-<h2>Budget</h2>
+<h2>Monthly Budget</h2>
 
 <div class="spacer"></div>
 
@@ -25,7 +25,7 @@
 <div class="spacer"></div>
 <div class="spacer"></div>
 
-<h2>Analysis</h2>
+<h2>Monthly Analysis</h2>
 
 <div class="spacer"></div>
 
@@ -51,11 +51,13 @@
   <div class="table-box ra"><%= @analysis[1][month] %></div>
   <div class="table-box ra"><%= @analysis[2][month] %></div>
   <div class="table-box ra"><%= @analysis[3][month] %></div>
-  <div class="table-box la"><span><%= @analysis[4][month] %></span><span class="red-span"><%= @analysis[5][month] %></span></div>
-  <% if @analysis[5][month] == "" %>
-    <div class="table-box"></div>
+  <div class="table-box la"><span class="green-span"><%= @analysis[4][month] %></span><span class="orange-span"><%= @analysis[5][month] %></span><span class="red-span"><%= @analysis[6][month] %></span></div>
+  <% if @analysis[6][month] != "" %>
+    <div class="table-box"><span class="red-span">OVER BUDGET</span></div>
+  <% elsif @analysis[5][month] != "" %>
+    <div class="table-box"><span class="orange-span">OVER WARNING</span></div>
   <% else %>
-    <div class="table-box"><span class="red-span">WARNING: OVERBUDGET</span></div>
+    <div class="table-box"></div>
   <% end %>
 
 <% end %>

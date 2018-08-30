@@ -1,4 +1,4 @@
-<h2>Edit Budget <%= @budget.id %></h2>
+<h2>Edit Monthly Budget <%= @budget.id %></h2>
 
 <form method="post" action="/budgets/<%= @budget.id %>">
 
@@ -8,10 +8,10 @@
   <div class="table-box"></div>
 
   <div class="table-head la"><label for="amount">Amount</label></div>
-  <div class="table-box ra"><input id="amount" class="input-text" type="text" name="amount" value=<%= Budget.money_amount(@budget.amount) %> /></div>
+  <div class="table-box ra"><input id="amount" class="input-text" type="text" name="amount" value=<%= Budget.money_input(@budget.amount) %> /></div>
 
   <div class="table-head la"><label for="warning">Warning</label></div>
-  <div class="table-box ra"><input id="warning" class="input-text" type="text" name="warning" value=<%= Budget.money_amount(@budget.warning) %> /></div>
+  <div class="table-box ra"><input id="warning" class="input-text" type="text" name="warning" value=<%= Budget.money_input(@budget.warning) %> /></div>
 
   <div class="table-box"></div>
   <div class="table-box"></div>

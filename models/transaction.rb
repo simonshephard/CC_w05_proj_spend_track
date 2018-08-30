@@ -89,8 +89,8 @@ class Transaction
     transactions = Transaction.all
     transactions = transactions.select {|transaction| transaction.date_time >= params[:start_date_time]} if params[:start_date_time] != ""
     transactions = transactions.select {|transaction| transaction.date_time <= params[:end_date_time]} if params[:end_date_time] != ""
-    transactions = transactions.select {|transaction| transaction.amount >= params[:min_amount].to_f} if params[:min_amount] != ""
-    transactions = transactions.select {|transaction| transaction.amount <= params[:max_amount].to_f} if params[:max_amount] != ""
+    transactions = transactions.select {|transaction| transaction.amount.to_f >= params[:min_amount].to_f} if params[:min_amount] != ""
+    transactions = transactions.select {|transaction| transaction.amount.to_f <= params[:max_amount].to_f} if params[:max_amount] != ""
     transactions = transactions.select {|transaction| transaction.merchant_id == params[:merchant_id].to_i} if params.has_key?(:merchant_id)
     transactions = transactions.select {|transaction| transaction.tag_id == params[:tag_id].to_i} if params.has_key?(:tag_id)
     transactions
@@ -136,6 +136,10 @@ class Transaction
     values = [@tag_id]
     data = SqlRunner.run(sql, values)
     Tag.new(data.first)
+  end
+
+  def self.money_input(amount_str)
+    sprintf("%#.2f", amount_str)
   end
 
   def self.money_amount(amount_str)

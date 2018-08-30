@@ -20,13 +20,6 @@ get '/budgets/new' do
   erb(:"budgets/new")
 end
 
-# ANALYSIS
-get '/budgets/analysis' do
-  @analysis = Budget.analysis
-  erb(:"budgets/analysis")
-end
-
-
 # SHOW
 get '/budgets/:id' do
   @budget = Budget.find(params[:id])
