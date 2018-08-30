@@ -50,22 +50,35 @@ class Transaction
   end
 
   def self.sort_id(transactions)
-    transactions.sort_by{|transaction| transaction.id}
+    sorted = transactions.sort_by{|transaction| transaction.id}
+    return sorted.reverse! if sorted == transactions
+    sorted
   end
   def self.sort_time(transactions)
-    transactions.sort_by{|transaction| transaction.date_time}
+    sorted = transactions.sort_by{|transaction| transaction.date_time}
+    return sorted.reverse! if sorted == transactions
+    sorted
   end
   def self.sort_amount(transactions)
-    transactions.sort_by{|transaction| transaction.amount.to_f}
+    sorted = transactions.sort_by{|transaction| transaction.amount.to_f}
+    return sorted.reverse! if sorted == transactions
+    sorted
   end
   def self.sort_description(transactions)
-    transactions.sort_by{|transaction| transaction.description}
+    sorted = transactions.sort_by{|transaction| transaction.description}
+    return sorted.reverse! if sorted == transactions
+    sorted
   end
   def self.sort_merchant(transactions)
-    transactions.sort_by{|transaction| transaction.merchant.name}
+    sorted = transactions.sort_by{|transaction| transaction.merchant.name}
+    reverse = sorted.reverse
+    return reverse if sorted == transactions
+    sorted
   end
   def self.sort_tag(transactions)
-    transactions.sort_by{|transaction| transaction.tag.name}
+    sorted_array = transactions.sort_by{|transaction| transaction.tag.name}
+    return sorted_array.reverse if sorted == transactions
+    sorted_array
   end
 
   def self.filter(params)
@@ -128,12 +141,12 @@ class Transaction
     date_time[0,10] + " " + date_time[11,5]
   end
 
-  def month
-    date_time[5,2]
-  end
-
   def year
     date_time[0,4]
+  end
+
+  def month
+    date_time[5,2]
   end
 
   def year_month

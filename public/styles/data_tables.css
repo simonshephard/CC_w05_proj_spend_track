@@ -1,4 +1,4 @@
-.transactions-table {
+.six-col-table {
   display: grid;
   /* width: 100%; */
   grid-template-columns: repeat(6, minmax(min-content, max-content));

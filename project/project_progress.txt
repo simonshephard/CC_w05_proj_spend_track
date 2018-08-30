@@ -3,8 +3,8 @@
 TUESDAY 20180828
 -1.Plan -
 -2.Scope -
--3.Design -
--4.Develop - fixes filter for radio, adds sort for all, adds filtered sort, consolidate all, buttons new transactions/filter
+-3.Design - analysis
+-4.Develop - fixes filter for radio, adds sort for all, adds filtered sort, consolidate all, buttons new transactions/filter, analysis
 -5.Present - updated wireframes, site map, presentation
 -6.PDA - updated wireframes, site map
 
@@ -23,11 +23,12 @@ OK-remove some other functionality from budget??
 DONE-back to xxx button on edit or save or cancel something
 OK-do delete/find as class method??
 DONE-refactor budget calc to put inside class not view
-TODO-fix and extend seeds
-TODO-budget per time period??
+DONE-budget per time period??
+DONE-fix and extend seeds
 TODO-3.money format - right align and add comma formats
 TODO-2.charts/analysis
 TODO-4.do, review and update presentation
+-more seeds - rent every month
 -front page highlights
 -responsive grid
 -better consistent colors - dark blue, greys, plus green, orange, reds

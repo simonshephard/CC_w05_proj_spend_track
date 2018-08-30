@@ -22,8 +22,6 @@ end
 # ANALYSIS
 get '/budgets/analysis' do
   @analysis = Budget.analysis
-  @months = @analysis.keys.sort
-  @budget = Budget.money_amount(Budget.all[0].amount)
   erb(:"budgets/analysis")
 end
 
