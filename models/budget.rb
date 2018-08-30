@@ -9,6 +9,7 @@ class Budget
     @id = options["id"].to_i
     @amount = options["amount"]
     @warning = options["warning"]
+    @warning = @amount if @warning > @amount
   end
 
   def save

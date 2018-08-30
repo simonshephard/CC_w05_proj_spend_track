@@ -18,9 +18,9 @@ DONE-FRI - plan / scope / design / initial develop
 DONE-SAT - plan / initial present and PDA, develop
 DONE-SUN - scope / present / develop
 DONE-MON - finish scope / design and develop
--TUE - develop
--WED - develop
--THU - final develop and complete presentation
+DONE-TUE - develop
+DONE-WED - develop
+DONE-THU - final develop and complete presentation
 -FRI - present
 
 
@@ -234,7 +234,7 @@ DONE-basic CRUD views - index, new, show, edit
 DONE-additional methods required beyond CRUD - tags, merchants for transaction
 DONE-add date and description to transaction
 OK-review ALL re further extensions
-TODO-specs for testing
+OK-specs for testing
 
 GOALS
 DONE-set up MVP asap
@@ -244,8 +244,8 @@ OK-identify and iteratively add functionality / styling
 5.TEST
 
 GOALS
--do TDD where feasible
--try to break anything I build!
+OKNO-do TDD where feasible
+DONE-try to break anything I build!
 
 
 6.PRESENT
@@ -254,7 +254,7 @@ TO DO
 DONE-rough outline presentation - see below
 DONE-choose (mac?) and set up presentation file
 DONE-try to do UX directly in presentation
-TODO-complete detailed presentation
+DONE-complete detailed presentation
 
 GOALS
 -Presentations Friday - 10 minutes to present + 5 minutes for questions

@@ -5,20 +5,20 @@ THURSDAY 20180830
 -2.Scope -
 -3.Design - reinstate money format for inputs without comma
 -4.Develop - analysis by month, sorting reverse, sort X, time, ID, money format 000, consolidate budget analysis to 1 page, chart
--5.Present -
+-5.Present - final presentation
 -6.PDA -
 
 NOTES
 DONE-money format - right align and add comma formats
 DONE-charts/analysis
 DONE-more seeds - rent every month
-TODO-do, review and update presentation
--front page highlights
--responsive grid
--better consistent colors - dark blue, greys, plus green, orange, reds
--add heading sort for merchant and tag
--refactor money formatting - make more consistent - and consistent store as integer and recover??
--add notes to design on process for updating description and date
+DONE-do, review and update presentation
+OKNO-front page highlights
+OKNO-responsive grid
+OKNO-better consistent colors - dark blue, greys, plus green, orange, reds
+OKNO-add heading sort for merchant and tag
+OKNO-refactor money formatting - make more consistent - and consistent store as integer and recover??
+OKNO-add notes to design on process for updating description and date
 
 
 WEDNESDAY 20180829
