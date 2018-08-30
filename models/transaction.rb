@@ -54,31 +54,35 @@ class Transaction
     return sorted.reverse! if sorted == transactions
     sorted
   end
+
   def self.sort_time(transactions)
-    sorted = transactions.sort_by{|transaction| transaction.date_time}
+    sorted = transactions.sort_by{|transaction| [transaction.date_time, transaction.id]}
     return sorted.reverse! if sorted == transactions
     sorted
   end
+
   def self.sort_amount(transactions)
-    sorted = transactions.sort_by{|transaction| transaction.amount.to_f}
+    sorted = transactions.sort_by{|transaction| [transaction.amount.to_f, transaction.id]}
     return sorted.reverse! if sorted == transactions
     sorted
   end
+
   def self.sort_description(transactions)
-    sorted = transactions.sort_by{|transaction| transaction.description}
+    sorted = transactions.sort_by{|transaction| [transaction.description, transaction.id]}
     return sorted.reverse! if sorted == transactions
     sorted
   end
+
   def self.sort_merchant(transactions)
-    sorted = transactions.sort_by{|transaction| transaction.merchant.name}
-    reverse = sorted.reverse
-    return reverse if sorted == transactions
+    sorted = transactions.sort_by{|transaction| [transaction.merchant.name, transaction.id]}
+    return sorted.reverse! if sorted == transactions
     sorted
   end
+
   def self.sort_tag(transactions)
-    sorted_array = transactions.sort_by{|transaction| transaction.tag.name}
-    return sorted_array.reverse if sorted == transactions
-    sorted_array
+    sorted = transactions.sort_by{|transaction| [transaction.tag.name, transaction.id]}
+    return sorted.reverse! if sorted == transactions
+    sorted
   end
 
   def self.filter(params)
@@ -113,6 +117,7 @@ class Transaction
   def self.set_current(transactions)
     @@current_transactions = transactions
   end
+
   def self.get_current
     @@current_transactions
   end
@@ -134,7 +139,10 @@ class Transaction
   end
 
   def self.money_amount(amount_str)
-    sprintf("%#.2f", amount_str)
+    str = sprintf("%#.2f", amount_str)
+    str = str.reverse.gsub(/(\d{3})/,"\\1,").chomp(",").reverse
+    str = (str.reverse.chomp("-").chomp(",") + "-").reverse if str[0] == "-"
+    str
   end
 
   def date_time_format

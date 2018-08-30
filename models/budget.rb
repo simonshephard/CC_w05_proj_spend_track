@@ -59,7 +59,10 @@ class Budget
   end
 
   def self.money_amount(amount_str)
-    sprintf("%#.2f", amount_str)
+    str = sprintf("%#.2f", amount_str)
+    str = str.reverse.gsub(/(\d{3})/,"\\1,").chomp(",").reverse
+    str = (str.reverse.chomp("-").chomp(",") + "-").reverse if str[0] == "-"
+    str
   end
 
   def capacity
@@ -84,7 +87,7 @@ class Budget
   def self.analysis
     spending = Budget.spending_by_month
     months = spending.keys.sort.reverse
-    budget = Budget.money_amount(Budget.all[0].amount)
+    budget = Budget.all[0].amount
     budget_formatted = Budget.money_amount(budget)
     monthly_spend = []
     budget_repeat = []
@@ -94,13 +97,17 @@ class Budget
     for month in months
       monthly_spend << Budget.money_amount(spending[month].to_s)
       budget_repeat << budget_formatted
-      vs_budget << Budget.money_amount((spending[month] - budget_formatted.to_f).to_s)
-      units = (spending[month] / (Budget.all[0].amount.to_f / 10.0)).ceil
-      if units > 10
-        chart_tobudget <<  "*" * 10
-        chart_overbudget <<  "*" * (units-10)
+      vs_budget << Budget.money_amount((spending[month] - budget.to_f).to_s)
+      units = (spending[month] / (Budget.all[0].amount.to_f / 20.0)).ceil
+      if units > 20
+        # chart_tobudget <<  "*" * 10
+        # chart_overbudget <<  "*" * (units-10)
+        chart_tobudget <<  "I" * 20
+        chart_overbudget <<  "I" * (units-20)
       else
-        chart_tobudget << "*" * units
+        # chart_tobudget << "*" * units
+        # chart_overbudget << ""
+        chart_tobudget << "I" * units
         chart_overbudget << ""
       end
     end

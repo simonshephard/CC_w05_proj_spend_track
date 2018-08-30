@@ -18,14 +18,14 @@
   <div class="table-box"></div>
   <div class="table-box"></div>
 
-<% (1..@analysis[0].length).each do |month| %>
+<% (0...@analysis[0].length).each do |month| %>
 
   <div class="table-box ca"><%= @analysis[0][month] %></div>
   <div class="table-box ra"><%= @analysis[1][month] %></div>
   <div class="table-box ra"><%= @analysis[2][month] %></div>
   <div class="table-box ra"><%= @analysis[3][month] %></div>
-  <div class="table-box la"><%= @analysis[4][month] %></div>
-  <div class="table-box la"><%= @analysis[5][month] %></div>
+  <div class="table-box la"><span><%= @analysis[4][month] %></span><span class="red-span"><%= @analysis[5][month] %></span></div>
+  <div class="table-box"></div>
 
 <% end %>
 

@@ -86,3 +86,8 @@ h2.warning {
   background: orange;
   color: darkblue;
 }
+
+.red-span {
+  color: red;
+  font-weight: 700;
+}
