@@ -4,4 +4,4 @@ Application to allow user to enter spending information and track and analyse ov
 
 Stack: Ruby, Sinatra, PostgreSQL, HTML, CSS. 
 
-Developed over one week as part of project for CodeClan course.
+Developed over one week as part of project for CodeClan 16-Week Professional Software Development Course.
